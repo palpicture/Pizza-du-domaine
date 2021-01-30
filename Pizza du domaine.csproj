@@ -110,11 +110,11 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="annuaire.txt" />
-    <Resource Include="effectifs.txt" />
-    <Resource Include="items.txt" />
-    <Resource Include="pizzas.txt" />
-    <Resource Include="pizzerias.txt" />
+    <Resource Include="bin\Debug\annuaire.txt" />
+    <Resource Include="bin\Debug\effectifs.txt" />
+    <Resource Include="bin\Debug\items.txt" />
+    <Resource Include="bin\Debug\pizzas.txt" />
+    <Resource Include="bin\Debug\pizzerias.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
