@@ -109,10 +109,8 @@ namespace ProblemePizzeria
 
             //Stock("items.txt", true);
             Repertoire repertoire = new Repertoire("pizzerias.txt");
-            Annuaire("annuaire.txt", true);
-            Menu("pizzas.txt", true);
-            //Console.WriteLine(repertoire);
-            Console.WriteLine("yolo");
+            Annuaire("annuaire.txt", false);
+            Menu("pizzas.txt", false);
             Console.ReadKey();
         }
     }

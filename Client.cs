@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace ProblemePizzeria
@@ -45,28 +46,6 @@ namespace ProblemePizzeria
         public override string ToString()
         {
             return base.ToString();
-        }
-
-        public void Appeler(string telPizzeria)
-        {
-            Repertoire r = new Repertoire("repertoire.txt");
-            List<Pizzeria> repertoire = r.CentreAppel;
-            bool test = false;
-            foreach(Pizzeria element in repertoire) // verifie si le telephone d'une pizzeria est dans le repertoire
-            {
-                if(element.Telephone == telPizzeria)
-                {
-                    Console.WriteLine("Appelle en cours...");
-                    //new Client(this.nom, this.prenom, this.adresse, this.tel, this.historique, this.dateCommande)
-                    Client c = new Client(this.nom, this.prenom, this.adresse, this.tel, this.historique, this.dateCommande);
-                    this.historique.Add(element.Decrocher(c)); // on ajoute cette commande a son historique
-                    test = true;
-                }                    
-            }
-            if(!test)
-            {
-                Console.WriteLine("Telephone introuvable...");
-            }
         }
     }
 }

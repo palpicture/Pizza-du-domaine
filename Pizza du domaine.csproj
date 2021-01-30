@@ -5,7 +5,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{9596ACC0-4A5C-4606-A5E6-D4C81791122B}</ProjectGuid>
-    <OutputType>WinExe</OutputType>
+    <OutputType>Exe</OutputType>
     <RootNamespace>Pizza_du_domaine</RootNamespace>
     <AssemblyName>Pizza du domaine</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
@@ -110,11 +110,13 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="annuaire.txt" />
-    <Resource Include="effectifs.txt" />
-    <Resource Include="items.txt" />
-    <Resource Include="pizzas.txt" />
-    <Resource Include="pizzerias.txt" />
+    <Resource Include="bin\Debug\items.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="bin\Debug\annuaire.txt" />
+    <Resource Include="bin\Debug\effectifs.txt" />
+    <Resource Include="bin\Debug\pizzas.txt" />
+    <Resource Include="bin\Debug\pizzerias.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace ProblemePizzeria
 {
@@ -32,23 +33,38 @@ namespace ProblemePizzeria
             return retour;
         }
 
-        /*public abstract string Nom
+        public virtual void Appeler(string telPizzeria)
         {
-            get;
+            Repertoire r = new Repertoire("repertoire.txt");
+            List<Pizzeria> repertoire = r.CentreAppel;
+            bool test = false;
+            foreach (Pizzeria element in repertoire) // verifie si le telephone d'une pizzeria est dans le repertoire
+            {
+                if (element.Telephone == telPizzeria)
+                {
+                    Console.Write("Appel en cours");
+                    for (int i = 0; i < 10; i++)
+                    {
+                        Console.Write(".");
+                        Thread.Sleep(1000);
+                    }
+                    Console.WriteLine();
+                    element.Decrocher(this);
+                    test = true;
+                }
+            }
+            if (!test)
+            {
+                Console.WriteLine("Telephone introuvable...");
+            }
         }
 
-        public abstract string Prenom
+        public string Tel
         {
-            get;
+            get { return this.tel; }
         }
-        public abstract string Adresse
-        {
-            get;
-        }
-        public abstract string Tel
-        {
-            get;
-        }*/
+
+     
 
 
 
