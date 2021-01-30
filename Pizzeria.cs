@@ -1,20 +1,21 @@
 ﻿using System;
+using System.IO;
 using System.Collections.Generic;
-using System.Collections;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Collections;
 
 namespace ProblemePizzeria
 {
-    class Pizzeria : IContact
+    class Pizzeria: IContact
     {
         private string nom;
         private string adresse;
         private string telephone;
-        private List<Client> listClients;
-        private List<Commande> listCommandes;
-        private List<Employer> listEmployers;
+        private List<Client> listClients= new List<Client>();
+        private List<Commande> listCommandes = new List<Commande>();
+        private List<Employer> listEmployers = new List<Employer>();
         private double caisse;
 
         public Pizzeria(string Nom, string Adresse, string Telephone)
@@ -22,6 +23,30 @@ namespace ProblemePizzeria
             this.nom = Nom;
             this.adresse = Adresse;
             this.telephone = Telephone;
+
+            StreamReader lecteur = new StreamReader("effectifs.txt");
+            string ligne = "";
+            //var lineCount = File.ReadLines(fichier).Count();
+            this.listEmployers = new List<Employer>();
+            while (lecteur.Peek() > 0)
+            {
+                ligne = lecteur.ReadLine(); // lis les items
+                if (ligne != null)
+                {
+                    string[] motsFichier = ligne.Split(';');   // split des mots à comparés, séparés par un ;
+                    
+                    if(motsFichier[0] == "Commis")
+                    {
+                        this.listEmployers.Add(new Commis(motsFichier[1], motsFichier[2], motsFichier[3], motsFichier[4], motsFichier[5], motsFichier[6], motsFichier[7]));
+                    }
+                    else
+                    {
+                        this.listEmployers.Add(new Livreur(motsFichier[1], motsFichier[2], motsFichier[3], motsFichier[4], motsFichier[5], motsFichier[6], motsFichier[7], motsFichier[8]));
+                    }
+                    
+                }
+            }
+            lecteur.Close();
         }
 
         #region Prorietes
@@ -34,7 +59,7 @@ namespace ProblemePizzeria
         {
             get { return this.adresse; }
         }
-        public string Telephone
+        public string Tel
         {
             get { return this.telephone; }
         }
@@ -71,14 +96,25 @@ namespace ProblemePizzeria
         {
             bool test = false;
             Client dejaEnregistre = null;
-            listClients.ForEach(item =>
+            if (this.listClients != null)
             {
-                if (item.Tel == p.Tel)
+                listClients.ForEach(item =>
                 {
-                    dejaEnregistre = item;
-                    test = true;
-                }
-            });
+                    if (item.Tel == p.Tel)
+                    {
+                        dejaEnregistre = item;
+                        test = true;
+                    }
+                    else
+                    {
+                        dejaEnregistre = null;
+                    }
+                });
+            }
+            else
+            {
+                dejaEnregistre = null;
+            }
             return new Tuple<bool, Client>(test, dejaEnregistre);
         }
 
@@ -101,7 +137,10 @@ namespace ProblemePizzeria
                 }
                 else
                 {
-
+                    Client newClient = new Client(p.Nom,p.Prenom,p.Adresse,p.Tel);
+                    this.listClients.Add(newClient);
+                    commandeEnregistre = commisAleatoire.PrendreCommande(newClient);
+                    newClient.Historiques.Add(commandeEnregistre);
                 }
                 this.listCommandes.Add(commandeEnregistre); // on ajoute la commande en cours; on la retirera quand le livreur aura donne la comm. au client
             }

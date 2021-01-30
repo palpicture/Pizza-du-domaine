@@ -12,7 +12,7 @@ namespace ProblemePizzeria
         protected string RIB;
         protected string etat;
 
-        public Employer(string Nom, string Prenom, string Adresse, string Tel, string Key, string RIB, string Etat):
+        public Employer(string Key, string Nom, string Prenom, string Adresse, string Tel, string RIB, string Etat):
             base(Nom, Prenom, Adresse, Tel)
         {
             this.key = Key;

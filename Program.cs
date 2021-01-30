@@ -109,8 +109,12 @@ namespace ProblemePizzeria
 
             //Stock("items.txt", true);
             Repertoire repertoire = new Repertoire("pizzerias.txt");
-            Annuaire("annuaire.txt", false);
             Menu("pizzas.txt", false);
+            List<Personne> listPersonne = Annuaire("annuaire.txt", false);
+            Personne hugo = listPersonne[0];
+            hugo.Appeler("0145587320");
+
+
             Console.ReadKey();
         }
     }
