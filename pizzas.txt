@@ -1,0 +1,12 @@
+Margarita;Tomate/Fromage;7,5
+Royal;Toute garnie;8,5
+Reine;Toute garnie;8,5
+Calzone;Calzone;8,5
+Buffalo;Toute garnie;8,5
+Americaine;Toute garnie;8,5
+Neptune;Vegetarienne;9
+Chorizo;Toute garnie;9
+Pacifique;Vegetarienne;9
+Miel;Vegetarienne;9
+4 Fromages;Tout fromages;9,5
+Napolitaine;Vegetarienne;9,5

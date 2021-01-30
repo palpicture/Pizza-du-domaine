@@ -1,0 +1,14 @@
+boisson;Coca;1,80
+boisson;IceTea;1,80
+boisson;Oasis;1,80
+boisson;Limonade;1,80
+boisson;Eau;1,80
+boisson;Eau gazeuse;1,80
+boisson;Orangina;1,80
+boisson;Biere;3,50
+salade;Cesar;8,20
+salade;Chevre Chaud;8,20
+salade;Montagnarde;8,20
+dessert;Cookie;4,00
+dessert;Brownie;4,00
+dessert;Mousse au chocolat;4,00
