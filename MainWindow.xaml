@@ -5,8 +5,24 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Pizza_du_domaine"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="1080" Width="1920">
     <Grid>
+        <Border HorizontalAlignment="Left" VerticalAlignment="Center" BorderBrush="Black" BorderThickness="5" Height="1000" Width="475.875" Margin="10,10,0,0">
+            <Grid HorizontalAlignment="Center" Height="1029" Margin="0,0,0,0" VerticalAlignment="Center" Width="475.875"/>
+        </Border>
+        <Border  HorizontalAlignment="Left" VerticalAlignment="Center" BorderBrush="Black" BorderThickness="5" Height="1000" Width="475.875" Margin="480.875,10,0,0" >
+            <Grid HorizontalAlignment="Center" Height="1029" Margin="0,0,0,0" VerticalAlignment="Center" Width="475.875"/>
+        </Border>
+        <Border  HorizontalAlignment="Left" VerticalAlignment="Center" BorderBrush="Black" BorderThickness="5" Height="1000" Width="475.875" Margin="953,10,0,0" >
+            <Grid HorizontalAlignment="Center" Height="1029" Margin="-15,-5,5,-5" VerticalAlignment="Center" Width="475.875"/>
+        </Border>
+        <Border  HorizontalAlignment="Left" VerticalAlignment="Center" BorderBrush="Black" BorderThickness="5" Height="1000" Width="475.875" Margin="1425,10,0,0" >
+            <Grid HorizontalAlignment="Center" Height="1029" Margin="0,0,0,0" VerticalAlignment="Center" Width="475.875"/>
+        </Border>
+
         
+
+
+
     </Grid>
 </Window>
