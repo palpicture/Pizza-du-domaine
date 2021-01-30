@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Pizza_du_domaine
+namespace ProblemePizzeria
 {
     /// <summary>
     /// Logique d'interaction pour MainWindow.xaml
@@ -23,6 +23,11 @@ namespace Pizza_du_domaine
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
