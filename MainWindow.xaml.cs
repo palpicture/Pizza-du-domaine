@@ -25,9 +25,19 @@ namespace ProblemePizzeria
             InitializeComponent();
         }
 
+        private void Commander(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Vous avez commander!! Youpi (petit con va)");
+        }
+
+        private void Mes_commandes_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Rien");
+        }
+
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-
+            MessageBox.Show("Travaille!");
         }
     }
 }
