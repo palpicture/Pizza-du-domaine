@@ -37,7 +37,6 @@ namespace ProblemePizzeria
             List<Pizza> listPizza = new List<Pizza>();
             List<Item> listItem = new List<Item>();
             Console.WriteLine("Bonjour!\nQue voulez vous manger ?");
-            Console.WriteLine("Tapez 0 pour quitter");
             bool quit = false;
             int choix = 0;
             double prix = 0;
