@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace ProblemePizzeria
 {
-    class Personne
+    class Personne: IContact
     {
         protected string nom;
         protected string prenom;
@@ -21,6 +22,25 @@ namespace ProblemePizzeria
             this.tel = Tel;
         }
 
+        public string Nom
+        {
+            get { return this.nom; }
+        }
+
+        public string Prenom
+        {
+            get { return this.prenom; }
+        }
+        public string Adresse
+        {
+            get { return this.adresse; }
+        }
+
+        public string Tel
+        {
+            get { return this.tel; }
+        }
+
         public override string ToString()
         {
             string retour = "";
@@ -32,25 +52,31 @@ namespace ProblemePizzeria
             return retour;
         }
 
-        /*public abstract string Nom
+        public virtual void Appeler(string telPizzeria)
         {
-            get;
+            Repertoire r = new Repertoire("pizzerias.txt");
+            List<Pizzeria> repertoire = r.CentreAppel;
+            bool test = false;
+            foreach (Pizzeria element in repertoire) // verifie si le telephone d'une pizzeria est dans le repertoire
+            {
+                if (element.Tel == telPizzeria)
+                {
+                    Console.Write("Appel en cours");
+                    for (int i = 0; i < 5; i++)
+                    {
+                        Console.Write(".");
+                        Thread.Sleep(1000);
+                    }
+                    Console.WriteLine();
+                    element.Decrocher(this);
+                    test = true;
+                }
+            }
+            if (!test)
+            {
+                Console.WriteLine("Telephone introuvable...");
+            }
         }
-
-        public abstract string Prenom
-        {
-            get;
-        }
-        public abstract string Adresse
-        {
-            get;
-        }
-        public abstract string Tel
-        {
-            get;
-        }*/
-
-
 
     }
 }

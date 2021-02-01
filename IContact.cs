@@ -18,7 +18,7 @@ namespace ProblemePizzeria
             get;
         }
 
-        string Telephone
+        string Tel
         {
             get;
         }

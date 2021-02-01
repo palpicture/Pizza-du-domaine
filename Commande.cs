@@ -40,11 +40,9 @@ namespace ProblemePizzeria
             retour += "Commande: " + this.numCommande + ",Date: "+ this.dateCommande + "\n";
             retour += "Client: " + this.client.Nom + ", " + this.client.Prenom + "\n";
             retour += "___________________\n";
-            this.listPizzas.ForEach(item => retour += item.ToString());
-            this.items.ForEach(item => retour += item.ToString());
-            retour += "-----------------" + prix;
-            retour += "Tel: " + this.client.Telephone + "\n";
-
+            this.listPizzas.ForEach(item => retour += item.ToString() + "\n");
+            this.items.ForEach(item => retour += item.ToString() + "\n");
+            retour += "-----------------" + prix + "$\n";
             return retour;
         }
 

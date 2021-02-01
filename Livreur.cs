@@ -12,8 +12,8 @@ namespace ProblemePizzeria
 
         private string moyenTransp;
        
-        public Livreur(string Nom, string Prenom, string Adresse, string Tel, string Key, string RIB, string Etat, string MoyenTransp) :
-            base(Nom, Prenom, Adresse, Tel, Key, RIB, Etat)
+        public Livreur(string Key, string Nom, string Prenom, string Adresse, string Tel, string RIB, string Etat, string MoyenTransp) :
+            base(Key, Nom, Prenom, Adresse, Tel, RIB, Etat)
         {
             this.nom = Nom;
             this.prenom = Prenom;

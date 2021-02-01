@@ -52,13 +52,18 @@ namespace ProblemePizzeria
         {
             double prix = this.prixbase; // prix de base pour la taille petite
             switch(this.taille)
-            {                
-                case "moyen":
+            {
+                case "petite":
+                    {
+                        prix = this.prixbase;
+                        break;
+                    }
+                case "moyenne":
                     {
                         prix = prix * 1.2; // + 20% du prix de base
                         break;
                     }
-                case "grand":
+                case "grande":
                     {
                         prix = prix * 1.3; // + 30% du prix de base
                         break;
@@ -69,7 +74,7 @@ namespace ProblemePizzeria
 
         public override string ToString()
         {
-            string retour = this.nom+this.taille;
+            string retour = this.nom;
             int intervalle = 25 - this.nom.Length;
             for (int i = 0; i < intervalle; i++)
             {
