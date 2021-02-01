@@ -5,7 +5,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{9596ACC0-4A5C-4606-A5E6-D4C81791122B}</ProjectGuid>
-    <OutputType>WinExe</OutputType>
+    <OutputType>Exe</OutputType>
     <RootNamespace>Pizza_du_domaine</RootNamespace>
     <AssemblyName>Pizza du domaine</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
@@ -58,9 +58,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Commander.xaml.cs">
-      <DependentUpon>Commander.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Repertoire.cs" />
     <Page Include="Commander.xaml">
       <SubType>Designer</SubType>
@@ -89,7 +86,6 @@
   <ItemGroup>
     <Compile Include="Personne.cs" />
     <Compile Include="Pizza.cs" />
-    <Compile Include="Pizzeria.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
@@ -117,11 +113,11 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="bin\Debug\annuaire.txt" />
-    <Resource Include="bin\Debug\effectifs.txt" />
-    <Resource Include="bin\Debug\items.txt" />
-    <Resource Include="bin\Debug\pizzas.txt" />
-    <Resource Include="bin\Debug\pizzerias.txt" />
+    <Resource Include="annuaire.txt" />
+    <Resource Include="effectifs.txt" />
+    <Resource Include="items.txt" />
+    <Resource Include="pizzas.txt" />
+    <Resource Include="pizzerias.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
