@@ -5,8 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Pizza_du_domaine"
         mc:Ignorable="d"
-        Title="MainWindow" Height="1080" Width="1920" WindowState="Maximized">
+        Title="MainWindow" Height="550" Width="900" 
+        WindowStyle="None"
+        Background="#181735"
+        ResizeMode="NoResize">
 
+    <!-- ANCIEN
     <Grid>
         <Border HorizontalAlignment="Left" VerticalAlignment="Center" BorderBrush="Black" BorderThickness="5" Height="1000" Width="475.875" Margin="10,10,0,0">
             <Grid HorizontalAlignment="Center" Height="1029" Margin="0,0,0,0" VerticalAlignment="Center" Width="475.875">
@@ -26,10 +30,420 @@
         <Border  HorizontalAlignment="Left" VerticalAlignment="Center" BorderBrush="Black" BorderThickness="5" Height="1000" Width="475.875" Margin="1425,10,0,0" >
             <Grid HorizontalAlignment="Center" Height="1029" Margin="0,0,0,0" VerticalAlignment="Center" Width="475.875"/>
         </Border>
+    </Grid>   -->
+
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="25"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Grid Background="#0f0f2d"
+              Grid.ColumnSpan="2"
+              MouseDown="Grid_MouseDown">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <TextBlock Text="Pizzeria du Domaine"
+                       Foreground="White"
+                       Grid.Column="1"
+                       Grid.ColumnSpan="2"
+                       VerticalAlignment="Center"
+                       HorizontalAlignment="Center"
+                       FontFamily="Fonts/#Dosis"
+                       FontWeight="Medium"
+                       FontSize="14"/>
+
+            <Button Content="Menu"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center"
+                    FontWeight="Medium"
+                    Grid.Column="3" Click="openWindowMenu">
+                
+                <Button.Style>
+                    <Style TargetType="Button">
+                        <Setter Property="Foreground" Value="LightGray"/>
+                        <Setter Property="TextElement.FontFamily" Value="Fonts/#Dosis"/>
+                        <Setter Property="Background" Value="Transparent"/>
+                        <Setter Property="Cursor" Value="Hand" />
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Foreground" Value="LightBlue"/>
+                                <Setter Property="Background" Value="Transparent"/>
+                            </Trigger>
+                        </Style.Triggers>
+
+                    </Style>
+                </Button.Style>
+
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}">
+                            <ContentPresenter VerticalAlignment="Center"
+                                                  HorizontalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+            
+            <Button Content="Client"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center"
+                    FontWeight="Medium"
+                    Grid.Column="4">
+
+                <Button.Style>
+                    <Style TargetType="Button">
+                        <Setter Property="Foreground" Value="LightGray"/>
+                        <Setter Property="TextElement.FontFamily" Value="Fonts/#Dosis"/>
+                        <Setter Property="Background" Value="Transparent"/>
+                        <Setter Property="Cursor" Value="Hand" />
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Foreground" Value="LightBlue"/>
+                                <Setter Property="Background" Value="Transparent"/>
+                            </Trigger>
+                        </Style.Triggers>
+
+                    </Style>
+                </Button.Style>
+
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}">
+                            <ContentPresenter VerticalAlignment="Center"
+                                                  HorizontalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+
+            <Button Content="Stats"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center"
+                    FontWeight="Medium"
+                    Grid.Column="5">
+
+                <Button.Style>
+                    <Style TargetType="Button">
+                        <Setter Property="Foreground" Value="LightGray"/>
+                        <Setter Property="TextElement.FontFamily" Value="Fonts/#Dosis"/>
+                        <Setter Property="Background" Value="Transparent"/>
+                        <Setter Property="Cursor" Value="Hand" />
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Foreground" Value="LightBlue"/>
+                                <Setter Property="Background" Value="Transparent"/>
+                            </Trigger>
+                        </Style.Triggers>
+
+                    </Style>
+                </Button.Style>
+
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}">
+                            <ContentPresenter VerticalAlignment="Center"
+                                                  HorizontalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+
+            <Button Content="Commander"
+                        Foreground="White"
+                        FontSize="11"
+                        FontWeight="Medium"
+                        Margin="0,0,10,0"
+                    Grid.Column="12"
+                    Grid.ColumnSpan="2">
+                <Button.Style>
+                    <Style TargetType="Button">
+                        <Setter Property="TextElement.FontFamily" Value="Fonts/#Dosis"/>
+                        <Setter Property="Background" Value="#fe6584"/>
+                        <Setter Property="Cursor" Value="Hand" />
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="#ff4c70"/>
+                            </Trigger>
+                        </Style.Triggers>
+
+                    </Style>
+                </Button.Style>
+
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Border Width="75" Height="15" 
+                                    CornerRadius="8"
+                                    Background="{TemplateBinding Background}">
+                            <ContentPresenter VerticalAlignment="Center"
+                                                  HorizontalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+
+            <Button Click="closeApp"
+                    Grid.Column="0" 
+                    Height="12" Width="12" 
+                    HorizontalAlignment="Left" 
+                    VerticalAlignment="Center" 
+                    Margin="5,0,0,0"                  
+                    ToolTip="Fermer">
+
+                <Button.Style>
+                    <Style TargetType="Button">
+                        <Setter Property="Background" Value="Red"/>
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="DarkRed"/>
+                            </Trigger>
+                        </Style.Triggers>
+
+                    </Style>
+                </Button.Style>
+
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Border Width="12" Height="12" 
+                                    CornerRadius="12"
+                                    Background="{TemplateBinding Background}">
+                            <ContentPresenter VerticalAlignment="Center"
+                                                  HorizontalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+
+            <Button Click="minimizeApp"
+                    Grid.Column="0" 
+                    Height="12" Width="12" 
+                    HorizontalAlignment="Left" 
+                    VerticalAlignment="Center" 
+                    Margin="22,0,0,0" 
+                    ToolTip="Réduire">
+
+                <Button.Style>
+                    <Style TargetType="Button">
+                        <Setter Property="Background" Value="Orange"/>
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="DarkOrange"/>
+                            </Trigger>
+                        </Style.Triggers>
+
+                    </Style>
+                </Button.Style>
+
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Border Width="12" Height="12" 
+                                    CornerRadius="12"
+                                    Background="{TemplateBinding Background}">
+                            <ContentPresenter VerticalAlignment="Center"
+                                                  HorizontalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+        </Grid>
+
+        <StackPanel Grid.Row="1"
+                    VerticalAlignment="Center"
+                    Margin="60">
 
 
+            <StackPanel>
+                <StackPanel Orientation="Horizontal"
+                            Margin="0,0,0,20">
+                    <Image Width="50" Height="50"
+                       Source="Images/PizzaKawai.png"
+                           Margin="0,0,10,0"
+                           RenderOptions.BitmapScalingMode="Fant"/>
+                    
+                    <TextBlock Text="Pizzeria du Domaine"
+                           Foreground="White"
+                           FontSize="20"
+                           FontWeight="Medium"
+                           VerticalAlignment="Center"
+                           FontFamily="Fonts/#Dosis"/>
+                </StackPanel>
 
+                <TextBlock Text="Choose"
+                       Foreground="White"
+                       FontSize="25"
+                       FontWeight="Medium"
+                       FontFamily="Fonts/#Dosis"/>
 
+                <TextBlock Text="Your"
+                       Foreground="White"
+                       FontSize="25"
+                       FontWeight="Medium"
+                       FontFamily="Fonts/#Dosis"/>
+
+                <TextBlock Text="Pizza"
+                       Foreground="White"
+                       FontSize="25"
+                       FontWeight="Medium"
+                       FontFamily="Fonts/#Dosis"/>
+
+                <TextBlock Text="Commandez votre Pizza Préférée. Prête à livrée rapidement chez vous. Dégustez votre Pizza Préférée sans bouger de chez vous. Commandez immédiatement ! Livré 7j/7. Pizzas Grandes Tailles. Ingrédients Frais."
+                       Foreground="White"
+                       FontSize="12"
+                       FontWeight="Medium"
+                       FontFamily="Fonts/#Dosis"
+                       TextWrapping="Wrap"
+                       Margin="0,10,0,0"/>
+
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal"
+                        Margin="0,15,0,0">
+                <Button Content="Commander"
+                        Foreground="White"
+                        FontSize="14"
+                        FontWeight="Medium"
+                        Margin="0,0,10,0">
+                    <Button.Style>
+                        <Style TargetType="Button">
+                            <Setter Property="TextElement.FontFamily" Value="Fonts/#Dosis"/>
+                            <Setter Property="Background" Value="#fe6584"/>
+                            <Setter Property="Cursor" Value="Hand" />
+                            <Style.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Background" Value="#ff4c70"/>
+                                </Trigger>
+                            </Style.Triggers>
+
+                        </Style>
+                    </Button.Style>
+
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <Border Width="100" Height="25" 
+                                    CornerRadius="12"
+                                    Background="{TemplateBinding Background}">
+                                <ContentPresenter VerticalAlignment="Center"
+                                                  HorizontalAlignment="Center"/>
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+
+                <Button Content="Launch Test"
+                        Foreground="White"
+                        FontSize="14"
+                        FontWeight="Medium">
+                    <Button.Style>
+                        <Style TargetType="Button">
+                            <Setter Property="TextElement.FontFamily" Value="Fonts/#Dosis"/>
+                            <Setter Property="Background" Value="#39385d"/>
+                            <Setter Property="Cursor" Value="Hand" />
+                            <Style.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Background" Value="#FF262532"/>
+                                </Trigger>
+                            </Style.Triggers>
+
+                        </Style>
+                    </Button.Style>
+
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <Border Width="100" Height="25" 
+                                    CornerRadius="12"
+                                    Background="{TemplateBinding Background}">
+                                <ContentPresenter VerticalAlignment="Center"
+                                                  HorizontalAlignment="Center"/>
+                            </Border>
+                        </ControlTemplate>
+
+                    </Button.Template>
+
+                </Button>
+            </StackPanel>
+        </StackPanel>
+
+        <Grid Grid.Column="1" 
+              Grid.RowSpan="2"
+              Margin="160,-365,-610,85"
+              Panel.ZIndex="-1">
+
+            <Grid.RenderTransform>
+                <RotateTransform Angle="50"/>
+            </Grid.RenderTransform>
+
+            <StackPanel Orientation="Horizontal"
+                        Margin="-350,250,-255,-250">
+
+                <StackPanel>
+                    <Border Width="700"
+                            Height="35"
+                            Background="#3dddc2"
+                            Margin="150,0,0,0"
+                            CornerRadius="20"/>
+
+                    <Border Width="700"
+                            Height="35"
+                            Background="#fc6586"
+                            Margin="0,15,0,0"
+                            CornerRadius="20"/>
+                    <Border Width="700"
+                            Height="35"
+                            Background="#383660"
+                            Margin="75,15,0,0"
+                            CornerRadius="20"/>
+                </StackPanel>
+
+                <StackPanel Background="Transparent">
+                    
+                    <Border Width="700"
+                            Height="35"
+                            Background="#3dddc2"
+                            Margin="150,0,0,0"
+                            CornerRadius="20"/>
+
+                    <Border Width="700"
+                            Height="35"
+                            Background="#fc6586"                          
+                            Margin="0,15,0,0"
+                            CornerRadius="20"/>
+                    <Border Width="700"
+                            Height="35"
+                            Background="#383660"
+                            Margin="75,15,0,0"
+                            CornerRadius="20"/>
+                </StackPanel>
+                
+            </StackPanel>
+
+        </Grid>
 
     </Grid>
+
+
+
+
+
 </Window>

@@ -10,27 +10,34 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace ProblemePizzeria
 {
     /// <summary>
-    /// Logique d'interaction pour MainWindow.xaml
+    /// Logique d'interaction pour Menu.xaml
     /// </summary>
-    /// 
-    public partial class MainWindow : Window
+    public partial class Menu : Window
     {
-        public MainWindow()
+        
+        public Menu()
         {
-   
             InitializeComponent();
-        }
 
+            /*List<Pizza> pizzaMenu = new List<Pizza>();
+            pizzaMenu = Program.Menu("pizzas.txt", false);
+
+            DataContext = this;
+            //ListView pizzaMenuLV = new ListView();
+            //pizzaMenuLV.ItemsSource = pizzaMenu;
+
+            //Pizzas.Children.Add(pizzaMenuLV);
+            */
+        }
 
         private void Grid_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            if(e.LeftButton == MouseButtonState.Pressed)
+            if (e.LeftButton == MouseButtonState.Pressed)
             {
                 DragMove();
             }
@@ -46,11 +53,11 @@ namespace ProblemePizzeria
             Close();
         }
 
-        private void openWindowMenu(object sender, RoutedEventArgs e)
+        private void openMainWindow(object sender, RoutedEventArgs e)
         {
-            ProblemePizzeria.Menu menu = new ProblemePizzeria.Menu();
+            ProblemePizzeria.MainWindow mainWindow = new ProblemePizzeria.MainWindow();
             Close();
-            menu.Show();
+            mainWindow.Show();
         }
     }
 }
