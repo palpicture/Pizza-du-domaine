@@ -59,7 +59,6 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Pizzeria.cs" />
-    <Compile Include="Repertoire.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -116,7 +115,6 @@
     <Resource Include="bin\Debug\annuaire.txt" />
     <Resource Include="bin\Debug\effectifs.txt" />
     <Resource Include="bin\Debug\pizzas.txt" />
-    <Resource Include="bin\Debug\pizzerias.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

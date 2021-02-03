@@ -41,6 +41,18 @@ namespace ProblemePizzeria
         }
         #endregion
 
+        public override void Appeler(Pizzeria pizzeria)
+        {
+            Console.Write("Appel en cours");
+            for (int i = 0; i < 5; i++)
+            {
+                Console.Write(".");
+                Thread.Sleep(1000);
+            }
+            Console.WriteLine();
+            pizzeria.Decrocher(this);
+        }
+
         public override string ToString()
         {
             return base.ToString();

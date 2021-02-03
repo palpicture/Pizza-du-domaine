@@ -7,7 +7,7 @@ using System.Threading;
 
 namespace ProblemePizzeria
 {
-    class Personne: IContact
+    class Personne : IContact
     {
         protected string nom;
         protected string prenom;
@@ -52,30 +52,16 @@ namespace ProblemePizzeria
             return retour;
         }
 
-        public virtual void Appeler(string telPizzeria)
+        public virtual void Appeler(Pizzeria pizzeria)
         {
-            Repertoire r = new Repertoire("pizzerias.txt");
-            List<Pizzeria> repertoire = r.CentreAppel;
-            bool test = false;
-            foreach (Pizzeria element in repertoire) // verifie si le telephone d'une pizzeria est dans le repertoire
+            Console.Write("Appel en cours");
+            for (int i = 0; i < 5; i++)
             {
-                if (element.Tel == telPizzeria)
-                {
-                    Console.Write("Appel en cours");
-                    for (int i = 0; i < 5; i++)
-                    {
-                        Console.Write(".");
-                        Thread.Sleep(1000);
-                    }
-                    Console.WriteLine();
-                    element.Decrocher(this);
-                    test = true;
-                }
+                Console.Write(".");
+                Thread.Sleep(1000);
             }
-            if (!test)
-            {
-                Console.WriteLine("Telephone introuvable...");
-            }
+            Console.WriteLine();
+            pizzeria.Decrocher(this);
         }
 
     }

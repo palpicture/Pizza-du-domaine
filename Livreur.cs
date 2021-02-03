@@ -26,7 +26,7 @@ namespace ProblemePizzeria
         public static void Livraison(Commande c)
         {
             Console.Write("Livraison");
-            for (int i = 0; i < 10; i++)
+            for (int i = 0; i < 5; i++)
             {
                 Console.Write(".");
                 Thread.Sleep(1000);

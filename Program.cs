@@ -106,14 +106,13 @@ namespace ProblemePizzeria
         {
             //Client Hugo = new Client("Nabeth", "Hugo", "18 rue Gabriel Faure", "0665570792)
             //Console.WriteLine(Hugo);
-
             //Stock("items.txt", true);
-            Repertoire repertoire = new Repertoire("pizzerias.txt");
+
             Menu("pizzas.txt", false);
             List<Personne> listPersonne = Annuaire("annuaire.txt", false);
             Personne hugo = listPersonne[0];
-            hugo.Appeler("0145587320");
-
+            Pizzeria Dominos = new Pizzeria("Dominos", "adresse", "01815466");
+            hugo.Appeler(Dominos);
 
             Console.ReadKey();
         }

@@ -131,6 +131,7 @@ namespace ProblemePizzeria
                     index = rnd.Next(0, effectifCommis.Count());
                 }
                 Commis commisAleatoire = effectifCommis[index];
+                Console.WriteLine(commisAleatoire.Prenom + " " + commisAleatoire.Nom + " prend votre commande");
                 if (Adherant(p).Item1) // si la personne est un client
                 {
                     commandeEnregistre = commisAleatoire.PrendreCommande(Adherant(p).Item2);
