@@ -67,10 +67,6 @@
     </Compile>
     <Compile Include="Pizzeria.cs" />
     <Compile Include="Repertoire.cs" />
-    <Page Include="Commander.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="Home.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

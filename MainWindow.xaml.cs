@@ -50,7 +50,8 @@ namespace Pizza_du_domaine
 
         private void OuvrirCommander(object sender, RoutedEventArgs e)
         {
-            Home.Content = new Commander();
+            
+
         }
 
     }

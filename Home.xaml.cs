@@ -22,9 +22,12 @@ namespace Pizza_du_domaine
     {
         public Home()
         {
+            
             InitializeComponent();
-           
-       
+            foreach (Pizza a in Program.menu)
+            {
+                AffichagePizzas.Items.Add(a);
+            }
         }
 
         private void ouvrirMenu(object sender, RoutedEventArgs e)

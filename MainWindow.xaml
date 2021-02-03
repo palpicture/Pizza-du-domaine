@@ -14,16 +14,12 @@
 
         <Grid.RowDefinitions>
             <RowDefinition Height="25"/>
-            <RowDefinition/>
+            <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-        </Grid.ColumnDefinitions>
+        <Frame x:Name="Home" Margin="0,0,0,0" Grid.Row="0" Grid.RowSpan="2" NavigationUIVisibility="Hidden"/>
 
-        <Grid Grid.ColumnSpan="2"
-              Background="#0f0f2d"
+        <Grid Background="#0f0f2d"
               MouseDown="Grid_MouseDown">
 
             <Grid.ColumnDefinitions>
@@ -61,7 +57,7 @@
                     Grid.Column="12"
                     Grid.ColumnSpan="2" Click="OuvrirCommander">
                 <Button.Style>
-                    <Style TargetType="Button">
+                    <Style TargetType="{x:Type Button}">
                         <Setter Property="TextElement.FontFamily" Value="Fonts/#Dosis"/>
                         <Setter Property="Background" Value="#fe6584"/>
                         <Setter Property="Cursor" Value="Hand" />
@@ -75,7 +71,7 @@
                 </Button.Style>
 
                 <Button.Template>
-                    <ControlTemplate TargetType="Button">
+                    <ControlTemplate TargetType="{x:Type Button}">
                         <Border Width="75" Height="15" 
                                     CornerRadius="8"
                                     Background="{TemplateBinding Background}">
@@ -95,7 +91,7 @@
                     ToolTip="Fermer">
 
                 <Button.Style>
-                    <Style TargetType="Button">
+                    <Style TargetType="{x:Type Button}">
                         <Setter Property="Background" Value="Red"/>
                         <Style.Triggers>
                             <Trigger Property="IsMouseOver" Value="True">
@@ -107,7 +103,7 @@
                 </Button.Style>
 
                 <Button.Template>
-                    <ControlTemplate TargetType="Button">
+                    <ControlTemplate TargetType="{x:Type Button}">
                         <Border Width="12" Height="12" 
                                     CornerRadius="12"
                                     Background="{TemplateBinding Background}">
@@ -127,7 +123,7 @@
                     ToolTip="Réduire">
 
                 <Button.Style>
-                    <Style TargetType="Button">
+                    <Style TargetType="{x:Type Button}">
                         <Setter Property="Background" Value="Orange"/>
                         <Style.Triggers>
                             <Trigger Property="IsMouseOver" Value="True">
@@ -139,7 +135,7 @@
                 </Button.Style>
 
                 <Button.Template>
-                    <ControlTemplate TargetType="Button">
+                    <ControlTemplate TargetType="{x:Type Button}">
                         <Border Width="12" Height="12" 
                                     CornerRadius="12"
                                     Background="{TemplateBinding Background}">
@@ -150,8 +146,6 @@
                 </Button.Template>
             </Button>
         </Grid>
-
-        <Frame x:Name="Home" Margin="0,0,0,0" Grid.Row="0" Grid.ColumnSpan="2" Grid.RowSpan="2" NavigationUIVisibility="Hidden"/>
 
     </Grid>
 </Window>

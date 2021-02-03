@@ -308,8 +308,34 @@
 
             </StackPanel>
         </Grid>
+        <Grid Grid.Column="1" Margin="0,10" Grid.Row="1">
+            <DataGrid x:Name="AffichagePizzas" HorizontalAlignment="Left" Margin="0,10" Background="Transparent" Width="450" VerticalAlignment="Center">
+
+                <DataGrid.Resources>
+                    <Style TargetType="{x:Type DataGridColumnHeader}">
+                        <Setter Property="FontSize" Value="20"/>
+                        <Setter Property="Background" Value="#0f0f2d"/>
+                        <Setter Property="Foreground" Value="white"/>
+                    </Style>
+                    <Style TargetType="{x:Type DataGridRow}">
+                        <Setter Property="FontSize" Value="15"/>
+                        <Setter Property="Foreground" Value="White"/>
+                        <Setter Property="Background" Value="Transparent"/>
+                        <Setter Property="VerticalAlignment" Value="Stretch"/>
+                    </Style>
+                </DataGrid.Resources>
+
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header=" Pizzas " Binding="{Binding Nom}"  Width="2*"/>
+                    <DataGridTextColumn Header=" Contenu " Binding="{Binding Type}" Width="4*"/>
+                    <!--<DataGridTextColumn Header=" Petite " Binding="{Binding Prix}" Width="1*"/>-->
+                    <!--<DataGridTextColumn Header=" Moyenne " Binding="{Binding PrixMoyen}" Width="1.5*"/>-->
+                    <!--<DataGridTextColumn Header=" Grande " Binding="{Binding PrixGrand}" Width="1*"/>-->
+                </DataGrid.Columns>
+            </DataGrid>
+        </Grid>
         <Frame x:Name="Menu" Margin="0,0,0,0" Grid.Row="0" NavigationUIVisibility="Hidden" />
     </Grid>
-    
-    
+
+
 </Page>
