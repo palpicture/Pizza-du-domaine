@@ -23,6 +23,15 @@ namespace Pizza_du_domaine
         public Home()
         {
             InitializeComponent();
+           
+       
+        }
+
+        private void ouvrirMenu(object sender, RoutedEventArgs e)
+        {
+            this.Visibility = Visibility.Hidden;
+            Menu.Content = new Menu();
+
         }
     }
 }

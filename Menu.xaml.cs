@@ -17,7 +17,7 @@ namespace Pizza_du_domaine
     /// <summary>
     /// Logique d'interaction pour Menu.xaml
     /// </summary>
-    public partial class Menu : Window
+    public partial class Menu : Page
     {
         
         public Menu()
@@ -35,29 +35,10 @@ namespace Pizza_du_domaine
             */
         }
 
-        private void Grid_MouseDown(object sender, MouseButtonEventArgs e)
-        {
-            if (e.LeftButton == MouseButtonState.Pressed)
-            {
-                DragMove();
-            }
-        }
 
-        private void minimizeApp(object sender, RoutedEventArgs e)
+        private void OuvrirCommander(object sender, RoutedEventArgs e)
         {
-            WindowState = WindowState.Minimized;
-        }
 
-        private void closeApp(object sender, RoutedEventArgs e)
-        {
-            Close();
-        }
-
-        private void openMainWindow(object sender, RoutedEventArgs e)
-        {
-            Pizza_du_domaine.MainWindow mainWindow = new Pizza_du_domaine.MainWindow();
-            Close();
-            mainWindow.Show();
         }
     }
 }

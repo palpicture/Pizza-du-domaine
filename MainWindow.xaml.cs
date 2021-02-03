@@ -26,7 +26,7 @@ namespace Pizza_du_domaine
         {
             Program.menu = Program.Menu("pizzas.txt", false);
             InitializeComponent();
-            Main.Content = new Home();
+            Home.Content = new Home();
         }
 
 
@@ -48,16 +48,10 @@ namespace Pizza_du_domaine
             Close();
         }
 
-        private void openWindowMenu(object sender, RoutedEventArgs e)
-        {
-            Pizza_du_domaine.Menu menu = new Pizza_du_domaine.Menu();
-            Close();
-            menu.Show();
-        }
-
         private void OuvrirCommander(object sender, RoutedEventArgs e)
         {
-            Main.Content = new Commander();
+            Home.Content = new Commander();
         }
+
     }
 }

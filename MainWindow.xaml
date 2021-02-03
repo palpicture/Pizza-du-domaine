@@ -10,7 +10,7 @@
         Background="#181735"
         ResizeMode="NoResize">
 
-    <Grid>
+    <Grid >
 
         <Grid.RowDefinitions>
             <RowDefinition Height="25"/>
@@ -22,8 +22,8 @@
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
 
-        <Grid Background="#0f0f2d"
-              Grid.ColumnSpan="2"
+        <Grid Grid.ColumnSpan="2"
+              Background="#0f0f2d"
               MouseDown="Grid_MouseDown">
 
             <Grid.ColumnDefinitions>
@@ -52,102 +52,6 @@
                        FontFamily="Fonts/#Dosis"
                        FontWeight="Medium"
                        FontSize="14"/>
-
-            <Button Content="Menu"
-                    VerticalAlignment="Center"
-                    HorizontalAlignment="Center"
-                    FontWeight="Medium"
-                    Grid.Column="3" Click="openWindowMenu">
-
-                <Button.Style>
-                    <Style TargetType="Button">
-                        <Setter Property="Foreground" Value="LightGray"/>
-                        <Setter Property="TextElement.FontFamily" Value="Fonts/#Dosis"/>
-                        <Setter Property="Background" Value="Transparent"/>
-                        <Setter Property="Cursor" Value="Hand" />
-                        <Style.Triggers>
-                            <Trigger Property="IsMouseOver" Value="True">
-                                <Setter Property="Foreground" Value="LightBlue"/>
-                                <Setter Property="Background" Value="Transparent"/>
-                            </Trigger>
-                        </Style.Triggers>
-
-                    </Style>
-                </Button.Style>
-
-                <Button.Template>
-                    <ControlTemplate TargetType="Button">
-                        <Border Background="{TemplateBinding Background}">
-                            <ContentPresenter VerticalAlignment="Center"
-                                                  HorizontalAlignment="Center"/>
-                        </Border>
-                    </ControlTemplate>
-                </Button.Template>
-            </Button>
-
-            <Button Content="Client"
-                    VerticalAlignment="Center"
-                    HorizontalAlignment="Center"
-                    FontWeight="Medium"
-                    Grid.Column="4">
-
-                <Button.Style>
-                    <Style TargetType="Button">
-                        <Setter Property="Foreground" Value="LightGray"/>
-                        <Setter Property="TextElement.FontFamily" Value="Fonts/#Dosis"/>
-                        <Setter Property="Background" Value="Transparent"/>
-                        <Setter Property="Cursor" Value="Hand" />
-                        <Style.Triggers>
-                            <Trigger Property="IsMouseOver" Value="True">
-                                <Setter Property="Foreground" Value="LightBlue"/>
-                                <Setter Property="Background" Value="Transparent"/>
-                            </Trigger>
-                        </Style.Triggers>
-
-                    </Style>
-                </Button.Style>
-
-                <Button.Template>
-                    <ControlTemplate TargetType="Button">
-                        <Border Background="{TemplateBinding Background}">
-                            <ContentPresenter VerticalAlignment="Center"
-                                                  HorizontalAlignment="Center"/>
-                        </Border>
-                    </ControlTemplate>
-                </Button.Template>
-            </Button>
-
-            <Button Content="Stats"
-                    VerticalAlignment="Center"
-                    HorizontalAlignment="Center"
-                    FontWeight="Medium"
-                    Grid.Column="5">
-
-                <Button.Style>
-                    <Style TargetType="Button">
-                        <Setter Property="Foreground" Value="LightGray"/>
-                        <Setter Property="TextElement.FontFamily" Value="Fonts/#Dosis"/>
-                        <Setter Property="Background" Value="Transparent"/>
-                        <Setter Property="Cursor" Value="Hand" />
-                        <Style.Triggers>
-                            <Trigger Property="IsMouseOver" Value="True">
-                                <Setter Property="Foreground" Value="LightBlue"/>
-                                <Setter Property="Background" Value="Transparent"/>
-                            </Trigger>
-                        </Style.Triggers>
-
-                    </Style>
-                </Button.Style>
-
-                <Button.Template>
-                    <ControlTemplate TargetType="Button">
-                        <Border Background="{TemplateBinding Background}">
-                            <ContentPresenter VerticalAlignment="Center"
-                                                  HorizontalAlignment="Center"/>
-                        </Border>
-                    </ControlTemplate>
-                </Button.Template>
-            </Button>
 
             <Button Content="Commander"
                         Foreground="White"
@@ -246,7 +150,8 @@
                 </Button.Template>
             </Button>
         </Grid>
-        <Frame x:Name="Main" Margin="0,0,0,0" Grid.Row="1" RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="2" NavigationUIVisibility="Hidden">
-        </Frame>
+
+        <Frame x:Name="Home" Margin="0,0,0,0" Grid.Row="0" Grid.ColumnSpan="2" Grid.RowSpan="2" NavigationUIVisibility="Hidden"/>
+
     </Grid>
 </Window>

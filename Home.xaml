@@ -4,15 +4,144 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Pizza_du_domaine"
-      mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
-      Title="Home">
+      mc:Ignorable="d"
+      Height="550" Width="900" 
+      Title="Home"
+      ShowsNavigationUI="False">
 
-    <Grid>
-        <StackPanel Grid.Row="1"
-                        VerticalAlignment="Center"
-                        Margin="60">
+    <Grid >
 
+        <Grid.RowDefinitions>
+            <RowDefinition Height="25"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Grid Grid.ColumnSpan="2">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Button Content="Menu"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center"
+                    FontWeight="Medium"
+                    Grid.Column="3"
+                    Click="ouvrirMenu">
+
+                <Button.Style>
+                    <Style TargetType="Button">
+                        <Setter Property="Foreground" Value="LightGray"/>
+                        <Setter Property="TextElement.FontFamily" Value="Fonts/#Dosis"/>
+                        <Setter Property="Background" Value="Transparent"/>
+                        <Setter Property="Cursor" Value="Hand" />
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Foreground" Value="LightBlue"/>
+                                <Setter Property="Background" Value="Transparent"/>
+                            </Trigger>
+                        </Style.Triggers>
+
+                    </Style>
+                </Button.Style>
+
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}">
+                            <ContentPresenter VerticalAlignment="Center"
+                                                  HorizontalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+
+            <Button Content="Client"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center"
+                    FontWeight="Medium"
+                    Grid.Column="4">
+
+                <Button.Style>
+                    <Style TargetType="Button">
+                        <Setter Property="Foreground" Value="LightGray"/>
+                        <Setter Property="TextElement.FontFamily" Value="Fonts/#Dosis"/>
+                        <Setter Property="Background" Value="Transparent"/>
+                        <Setter Property="Cursor" Value="Hand" />
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Foreground" Value="LightBlue"/>
+                                <Setter Property="Background" Value="Transparent"/>
+                            </Trigger>
+                        </Style.Triggers>
+
+                    </Style>
+                </Button.Style>
+
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}">
+                            <ContentPresenter VerticalAlignment="Center"
+                                                  HorizontalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+
+            <Button Content="Stats"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center"
+                    FontWeight="Medium"
+                    Grid.Column="5">
+
+                <Button.Style>
+                    <Style TargetType="Button">
+                        <Setter Property="Foreground" Value="LightGray"/>
+                        <Setter Property="TextElement.FontFamily" Value="Fonts/#Dosis"/>
+                        <Setter Property="Background" Value="Transparent"/>
+                        <Setter Property="Cursor" Value="Hand" />
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Foreground" Value="LightBlue"/>
+                                <Setter Property="Background" Value="Transparent"/>
+                            </Trigger>
+                        </Style.Triggers>
+
+                    </Style>
+                </Button.Style>
+
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}">
+                            <ContentPresenter VerticalAlignment="Center"
+                                                  HorizontalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+
+        </Grid>
+
+        <StackPanel  Grid.Row="1"
+                      VerticalAlignment="Center"
+                      Margin="60" >
 
             <StackPanel>
                 <StackPanel Orientation="Horizontal"
@@ -125,8 +254,10 @@
             </StackPanel>
         </StackPanel>
 
-        <Grid
-                  Margin="443,-328,-893,48"
+
+        <Grid     Grid.Column="1"
+                  Grid.RowSpan="2"
+                  Margin="160,-365,-610,85"
                   Panel.ZIndex="-1">
 
             <Grid.RenderTransform>
@@ -177,5 +308,8 @@
 
             </StackPanel>
         </Grid>
+        <Frame x:Name="Menu" Margin="0,0,0,0" Grid.Row="0" NavigationUIVisibility="Hidden" />
     </Grid>
+    
+    
 </Page>
