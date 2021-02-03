@@ -21,9 +21,10 @@ namespace Pizza_du_domaine
     /// 
     public partial class MainWindow : Window
     {
+  
         public MainWindow()
         {
-   
+            Program.menu = Program.Menu("pizzas.txt", false);
             InitializeComponent();
             Main.Content = new Home();
         }
@@ -52,6 +53,11 @@ namespace Pizza_du_domaine
             Pizza_du_domaine.Menu menu = new Pizza_du_domaine.Menu();
             Close();
             menu.Show();
+        }
+
+        private void OuvrirCommander(object sender, RoutedEventArgs e)
+        {
+            Main.Content = new Commander();
         }
     }
 }

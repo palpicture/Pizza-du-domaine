@@ -22,7 +22,9 @@ namespace Pizza_du_domaine
     {
         public Commander()
         {
+            Pizzas.Items.Add(Program.menu);
             InitializeComponent();
+            
         }
     }
 }

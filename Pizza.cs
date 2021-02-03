@@ -12,6 +12,8 @@ namespace Pizza_du_domaine
         private string taille;
         private string type;
         private double prixbase;
+        private double prixmoyen;
+        private double prixgrand;
 
         public Pizza(string Nom, string Taille, string Type, double Prix)
         {
@@ -19,6 +21,8 @@ namespace Pizza_du_domaine
             this.taille = Taille;
             this.type = Type;
             this.prixbase = Prix;
+            this.prixmoyen = Prix * 1.2;
+            this.prixgrand = Prix * 1.3;
         }
 
         public Pizza(string Nom, string Type, double Prix)
@@ -26,6 +30,8 @@ namespace Pizza_du_domaine
             this.nom = Nom;
             this.type = Type;
             this.prixbase = Prix;
+            this.prixmoyen = Prix * 1.2;
+            this.prixgrand = Prix * 1.3;
         }
 
         public string Nom
@@ -46,6 +52,14 @@ namespace Pizza_du_domaine
         public double Prix
         {
             get { return this.prixbase; }
+        }
+        public double PrixMoyen
+        {
+            get { return this.prixmoyen; }
+        }
+        public double PrixGrand
+        {
+            get { return this.prixgrand; }
         }
 
         public double PrixFinal()
