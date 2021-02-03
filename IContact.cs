@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ProblemePizzeria
+namespace Pizza_du_domaine
 {
     interface IContact
     {

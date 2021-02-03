@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Collections;
 
-namespace ProblemePizzeria
+namespace Pizza_du_domaine
 {
     class Pizzeria: IContact
     {

@@ -1,4 +1,4 @@
-﻿<Window x:Class="ProblemePizzeria.MainWindow"
+﻿<Window x:Class="Pizza_du_domaine.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -9,28 +9,6 @@
         WindowStyle="None"
         Background="#181735"
         ResizeMode="NoResize">
-
-    <!-- ANCIEN
-    <Grid>
-        <Border HorizontalAlignment="Left" VerticalAlignment="Center" BorderBrush="Black" BorderThickness="5" Height="1000" Width="475.875" Margin="10,10,0,0">
-            <Grid HorizontalAlignment="Center" Height="1029" Margin="0,0,0,0" VerticalAlignment="Center" Width="475.875">
-                <Button Content="Commander" HorizontalAlignment="Left" Margin="35,180,0,0" VerticalAlignment="Top" Width="400" Height="168" Click="Commander"/>
-                <Button x:Name="Mes_commandes" Content="Voir ses commandes" HorizontalAlignment="Left" Margin="35,387,0,0" VerticalAlignment="Top" Width="400" Height="182" Click="Mes_commandes_Click"/>
-                <Button x:Name="Button" Content="Button" HorizontalAlignment="Left" Margin="35,593,0,0" VerticalAlignment="Top" Width="400" Height="182" Click="Button_Click"/>
-                <Button Content="Button" HorizontalAlignment="Left" Margin="35,805,0,0" VerticalAlignment="Top" Width="400" Height="182"/>
-                <TextBlock HorizontalAlignment="Left" Margin="35,53,0,0" TextWrapping="Wrap" Text="Client" VerticalAlignment="Top" Width="400" Height="86" FontSize="50" FontFamily="Segoe UI Black" TextAlignment="Center"/>
-            </Grid>
-        </Border>
-        <Border  HorizontalAlignment="Left" VerticalAlignment="Center" BorderBrush="Black" BorderThickness="5" Height="1000" Width="475.875" Margin="480.875,10,0,0" >
-            <Grid HorizontalAlignment="Center" Height="1029" Margin="0,0,0,0" VerticalAlignment="Center" Width="475.875"/>
-        </Border>
-        <Border  HorizontalAlignment="Left" VerticalAlignment="Center" BorderBrush="Black" BorderThickness="5" Height="1000" Width="475.875" Margin="953,10,0,0" >
-            <Grid HorizontalAlignment="Center" Height="1029" Margin="-15,-5,5,-5" VerticalAlignment="Center" Width="475.875"/>
-        </Border>
-        <Border  HorizontalAlignment="Left" VerticalAlignment="Center" BorderBrush="Black" BorderThickness="5" Height="1000" Width="475.875" Margin="1425,10,0,0" >
-            <Grid HorizontalAlignment="Center" Height="1029" Margin="0,0,0,0" VerticalAlignment="Center" Width="475.875"/>
-        </Border>
-    </Grid>   -->
 
     <Grid>
 
@@ -80,7 +58,7 @@
                     HorizontalAlignment="Center"
                     FontWeight="Medium"
                     Grid.Column="3" Click="openWindowMenu">
-                
+
                 <Button.Style>
                     <Style TargetType="Button">
                         <Setter Property="Foreground" Value="LightGray"/>
@@ -106,7 +84,7 @@
                     </ControlTemplate>
                 </Button.Template>
             </Button>
-            
+
             <Button Content="Client"
                     VerticalAlignment="Center"
                     HorizontalAlignment="Center"
@@ -268,182 +246,7 @@
                 </Button.Template>
             </Button>
         </Grid>
-
-        <StackPanel Grid.Row="1"
-                    VerticalAlignment="Center"
-                    Margin="60">
-
-
-            <StackPanel>
-                <StackPanel Orientation="Horizontal"
-                            Margin="0,0,0,20">
-                    <Image Width="50" Height="50"
-                       Source="Images/PizzaKawai.png"
-                           Margin="0,0,10,0"
-                           RenderOptions.BitmapScalingMode="Fant"/>
-                    
-                    <TextBlock Text="Pizzeria du Domaine"
-                           Foreground="White"
-                           FontSize="20"
-                           FontWeight="Medium"
-                           VerticalAlignment="Center"
-                           FontFamily="Fonts/#Dosis"/>
-                </StackPanel>
-
-                <TextBlock Text="Choose"
-                       Foreground="White"
-                       FontSize="25"
-                       FontWeight="Medium"
-                       FontFamily="Fonts/#Dosis"/>
-
-                <TextBlock Text="Your"
-                       Foreground="White"
-                       FontSize="25"
-                       FontWeight="Medium"
-                       FontFamily="Fonts/#Dosis"/>
-
-                <TextBlock Text="Pizza"
-                       Foreground="White"
-                       FontSize="25"
-                       FontWeight="Medium"
-                       FontFamily="Fonts/#Dosis"/>
-
-                <TextBlock Text="Commandez votre Pizza Préférée. Prête à livrée rapidement chez vous. Dégustez votre Pizza Préférée sans bouger de chez vous. Commandez immédiatement ! Livré 7j/7. Pizzas Grandes Tailles. Ingrédients Frais."
-                       Foreground="White"
-                       FontSize="12"
-                       FontWeight="Medium"
-                       FontFamily="Fonts/#Dosis"
-                       TextWrapping="Wrap"
-                       Margin="0,10,0,0"/>
-
-            </StackPanel>
-
-            <StackPanel Orientation="Horizontal"
-                        Margin="0,15,0,0">
-                <Button Content="Commander"
-                        Foreground="White"
-                        FontSize="14"
-                        FontWeight="Medium"
-                        Margin="0,0,10,0">
-                    <Button.Style>
-                        <Style TargetType="Button">
-                            <Setter Property="TextElement.FontFamily" Value="Fonts/#Dosis"/>
-                            <Setter Property="Background" Value="#fe6584"/>
-                            <Setter Property="Cursor" Value="Hand" />
-                            <Style.Triggers>
-                                <Trigger Property="IsMouseOver" Value="True">
-                                    <Setter Property="Background" Value="#ff4c70"/>
-                                </Trigger>
-                            </Style.Triggers>
-
-                        </Style>
-                    </Button.Style>
-
-                    <Button.Template>
-                        <ControlTemplate TargetType="Button">
-                            <Border Width="100" Height="25" 
-                                    CornerRadius="12"
-                                    Background="{TemplateBinding Background}">
-                                <ContentPresenter VerticalAlignment="Center"
-                                                  HorizontalAlignment="Center"/>
-                            </Border>
-                        </ControlTemplate>
-                    </Button.Template>
-                </Button>
-
-                <Button Content="Launch Test"
-                        Foreground="White"
-                        FontSize="14"
-                        FontWeight="Medium">
-                    <Button.Style>
-                        <Style TargetType="Button">
-                            <Setter Property="TextElement.FontFamily" Value="Fonts/#Dosis"/>
-                            <Setter Property="Background" Value="#39385d"/>
-                            <Setter Property="Cursor" Value="Hand" />
-                            <Style.Triggers>
-                                <Trigger Property="IsMouseOver" Value="True">
-                                    <Setter Property="Background" Value="#FF262532"/>
-                                </Trigger>
-                            </Style.Triggers>
-
-                        </Style>
-                    </Button.Style>
-
-                    <Button.Template>
-                        <ControlTemplate TargetType="Button">
-                            <Border Width="100" Height="25" 
-                                    CornerRadius="12"
-                                    Background="{TemplateBinding Background}">
-                                <ContentPresenter VerticalAlignment="Center"
-                                                  HorizontalAlignment="Center"/>
-                            </Border>
-                        </ControlTemplate>
-
-                    </Button.Template>
-
-                </Button>
-            </StackPanel>
-        </StackPanel>
-
-        <Grid Grid.Column="1" 
-              Grid.RowSpan="2"
-              Margin="160,-365,-610,85"
-              Panel.ZIndex="-1">
-
-            <Grid.RenderTransform>
-                <RotateTransform Angle="50"/>
-            </Grid.RenderTransform>
-
-            <StackPanel Orientation="Horizontal"
-                        Margin="-350,250,-255,-250">
-
-                <StackPanel>
-                    <Border Width="700"
-                            Height="35"
-                            Background="#3dddc2"
-                            Margin="150,0,0,0"
-                            CornerRadius="20"/>
-
-                    <Border Width="700"
-                            Height="35"
-                            Background="#fc6586"
-                            Margin="0,15,0,0"
-                            CornerRadius="20"/>
-                    <Border Width="700"
-                            Height="35"
-                            Background="#383660"
-                            Margin="75,15,0,0"
-                            CornerRadius="20"/>
-                </StackPanel>
-
-                <StackPanel Background="Transparent">
-                    
-                    <Border Width="700"
-                            Height="35"
-                            Background="#3dddc2"
-                            Margin="150,0,0,0"
-                            CornerRadius="20"/>
-
-                    <Border Width="700"
-                            Height="35"
-                            Background="#fc6586"                          
-                            Margin="0,15,0,0"
-                            CornerRadius="20"/>
-                    <Border Width="700"
-                            Height="35"
-                            Background="#383660"
-                            Margin="75,15,0,0"
-                            CornerRadius="20"/>
-                </StackPanel>
-                
-            </StackPanel>
-
-        </Grid>
-
+        <Frame x:Name="Main" Margin="0,0,0,0" Grid.Row="1" RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="2">
+        </Frame>
     </Grid>
-
-
-
-
-
 </Window>

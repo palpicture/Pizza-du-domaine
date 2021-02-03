@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace ProblemePizzeria
+namespace Pizza_du_domaine
 {
     /// <summary>
     /// Logique d'interaction pour MainWindow.xaml
@@ -25,6 +25,7 @@ namespace ProblemePizzeria
         {
    
             InitializeComponent();
+            Main.Content = new Home();
         }
 
 
@@ -48,7 +49,7 @@ namespace ProblemePizzeria
 
         private void openWindowMenu(object sender, RoutedEventArgs e)
         {
-            ProblemePizzeria.Menu menu = new ProblemePizzeria.Menu();
+            Pizza_du_domaine.Menu menu = new Pizza_du_domaine.Menu();
             Close();
             menu.Show();
         }
