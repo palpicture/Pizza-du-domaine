@@ -47,6 +47,7 @@ namespace Pizza_du_domaine
         public string Taille
         {
             get { return this.taille; }
+            set { taille = value; }
         }
 
         public double Prix

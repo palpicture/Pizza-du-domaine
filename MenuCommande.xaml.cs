@@ -20,11 +20,32 @@ namespace Pizza_du_domaine
     /// </summary>
     public partial class MenuCommande : Page
     {
+        static List<Pizza> commandeP;
+        static List<Item> commandeI;
         public MenuCommande()
         {
             InitializeComponent();
-            Program.menu.ForEach(x => AffichagePizzas.Items.Add(x));
-            Program.items.ForEach(x => AffichageItems.Items.Add(x));
+            Program.menu.ForEach(x => cmbPizzas.Items.Add(x));
+            Program.items.ForEach(x => cmbItem.Items.Add(x));
+            commandeP = new List<Pizza>();
+            commandeI = new List<Item>();
+
+        }
+
+        private void AjoutPizza(object sender, RoutedEventArgs e)
+        {
+            Pizza temp = (Pizza)cmbPizzas.SelectedValue;
+            temp.Taille = cmbTaille.Text;
+            commandeP.Add(temp);
+            liste.Items.Add(temp.ToString());
+            
+        }
+
+        private void Ajouteritem(object sender, RoutedEventArgs e)
+        {
+            Item temp = (Item)cmbItem.SelectedValue;
+            commandeI.Add(temp);
+            liste.Items.Add(temp.ToString());
         }
     }
 }
