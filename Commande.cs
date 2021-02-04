@@ -35,15 +35,16 @@ namespace Pizza_du_domaine
             this.items = Items;
             this.listPizzas = ListPizzas;
         }
-        public Commande( DateTime DateCommande, List<Item> Items, List<Pizza> ListPizzas, Client Client, Commis Commis)
+        public Commande( List<Item> Items, List<Pizza> ListPizzas, Client Client, Commis Commis)
         {
             numprecedent++;
             this.numCommande = "" + numprecedent; 
-            this.dateCommande = DateCommande;
+            this.dateCommande = DateTime.Now;
             this.client = Client;
             this.commis = Commis;
             this.items = Items;
             this.listPizzas = ListPizzas;
+            Client.AddCommande(this);
         }
 
         public string Facture(double prix)
@@ -56,6 +57,20 @@ namespace Pizza_du_domaine
             this.items.ForEach(item => retour += item.ToString() + "\n");
             retour += "-----------------" + prix + "$\n";
             return retour;
+        }
+
+        public double Prix()
+        {
+            double res = 0;
+            foreach(Pizza a in listPizzas)
+            {
+                res += a.PrixFinal();
+            }
+            foreach(Item a in items)
+            {
+                res += a.Prix;
+            }
+            return res;
         }
 
         

@@ -99,7 +99,7 @@
             Foreground="White"
             FontSize="14"
             FontWeight="Medium"
-            Margin="690,385,10,40">
+            Margin="690,385,10,40" Click="CommandeEtapeSuivante">
             <Button.Style>
                 <Style TargetType="{x:Type Button}">
                     <Setter Property="TextElement.FontFamily" Value="Fonts/#Dosis"/>

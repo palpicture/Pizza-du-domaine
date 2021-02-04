@@ -20,15 +20,13 @@ namespace Pizza_du_domaine
     /// </summary>
     public partial class MenuCommande : Page
     {
-        static List<Pizza> commandeP;
-        static List<Item> commandeI;
         public MenuCommande()
         {
             InitializeComponent();
             Program.menu.ForEach(x => cmbPizzas.Items.Add(x));
             Program.items.ForEach(x => cmbItem.Items.Add(x));
-            commandeP = new List<Pizza>();
-            commandeI = new List<Item>();
+            Program.commandeP = new List<Pizza>();
+            Program.commandeI = new List<Item>();
 
         }
 
@@ -36,7 +34,7 @@ namespace Pizza_du_domaine
         {
             Pizza temp = (Pizza)cmbPizzas.SelectedValue;
             temp.Taille = cmbTaille.Text;
-            commandeP.Add(temp);
+            Program.commandeP.Add(temp);
             liste.Items.Add(temp.ToString());
             
         }
@@ -44,8 +42,14 @@ namespace Pizza_du_domaine
         private void Ajouteritem(object sender, RoutedEventArgs e)
         {
             Item temp = (Item)cmbItem.SelectedValue;
-            commandeI.Add(temp);
+            Program.commandeI.Add(temp);
             liste.Items.Add(temp.ToString());
+        }
+
+        private void CommandeEtapeSuivante(object sender, RoutedEventArgs e)
+        {
+            MainWindow objMainWindow = (MainWindow)Window.GetWindow(this);
+            objMainWindow.Home.Content = new ClientComisCommande();
         }
     }
 }

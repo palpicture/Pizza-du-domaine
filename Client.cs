@@ -11,6 +11,7 @@ namespace Pizza_du_domaine
     {
         private List<Commande> historique = new List<Commande>();
         private DateTime dateCommande;
+        private double cumul;
 
         public Client(string Nom, string Prenom, string Adresse, string Tel, List<Commande> Historique, DateTime DateCommande) :
             base(Nom, Prenom, Adresse, Tel)
@@ -21,6 +22,7 @@ namespace Pizza_du_domaine
             this.tel = Tel;
             this.historique = Historique;
             this.dateCommande = DateCommande;
+            this.cumul = CalculCumul();
         }
 
         public Client(string Nom, string Prenom, string Adresse, string Tel) :
@@ -30,6 +32,8 @@ namespace Pizza_du_domaine
             this.prenom = Prenom;
             this.adresse = Adresse;
             this.tel = Tel;
+            this.historique = new List<Commande>();
+            this.cumul = CalculCumul();
         }
 
 
@@ -44,6 +48,21 @@ namespace Pizza_du_domaine
         public override string ToString()
         {
             return base.ToString();
+        }
+        
+        public double CalculCumul()
+        {
+            double res = 0;
+            foreach(Commande a in historique)
+            {
+                res += a.Prix();
+            }
+            return res;
+        }
+
+        public void AddCommande(Commande commande)
+        {
+            historique.Add(commande);
         }
     }
 }

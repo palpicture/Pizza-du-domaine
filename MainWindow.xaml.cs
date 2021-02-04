@@ -27,6 +27,7 @@ namespace Pizza_du_domaine
             Program.menu = Program.Menu("pizzas.txt", false);
             Program.items = Program.Stock("items.txt", false);
             Program.personnes = Program.Annuaire("annuaire.txt", false);
+            Program.commandes = new List<Commande>();
             InitializeComponent();
             Home.Content = new Home();
         }
@@ -55,6 +56,7 @@ namespace Pizza_du_domaine
             Home.Content = new MenuCommande();
 
         }
+
 
     }
 }
