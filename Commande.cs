@@ -16,6 +16,8 @@ namespace Pizza_du_domaine
         public List<Item> items;
         public List<Pizza> listPizzas;
 
+        public static int numprecedent = 0;
+
         public Commande(string Num, DateTime DateCommande, List<Item> Items, List<Pizza> ListPizzas, Client Client, Commis Commis)
         {
             this.numCommande = Num;
@@ -30,6 +32,16 @@ namespace Pizza_du_domaine
         {
             this.numCommande = Num;
             this.dateCommande = DateCommande;
+            this.items = Items;
+            this.listPizzas = ListPizzas;
+        }
+        public Commande( DateTime DateCommande, List<Item> Items, List<Pizza> ListPizzas, Client Client, Commis Commis)
+        {
+            numprecedent++;
+            this.numCommande = "" + numprecedent; 
+            this.dateCommande = DateCommande;
+            this.client = Client;
+            this.commis = Commis;
             this.items = Items;
             this.listPizzas = ListPizzas;
         }

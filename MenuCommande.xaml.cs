@@ -23,6 +23,8 @@ namespace Pizza_du_domaine
         public MenuCommande()
         {
             InitializeComponent();
+            Program.menu.ForEach(x => AffichagePizzas.Items.Add(x));
+            Program.items.ForEach(x => AffichageItems.Items.Add(x));
         }
     }
 }

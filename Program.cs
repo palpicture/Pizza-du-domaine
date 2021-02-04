@@ -11,6 +11,8 @@ namespace Pizza_du_domaine
     class Program
     {
         public static List<Pizza> menu;
+        public static List<Item> items;
+        public static List<Personne> personnes;
         public static List<Item> Stock(string fichier, bool affichage)
         {
             StreamReader lecteur = new StreamReader(fichier);

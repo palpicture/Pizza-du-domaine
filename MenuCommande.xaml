@@ -9,7 +9,7 @@
       Title="MenuCommande">
 
     <Grid>
-        <DataGrid x:Name="AffichagePizzas" HorizontalAlignment="Left" Margin="0,10,0,71" Background="Transparent" Width="790" >
+        <DataGrid x:Name="AffichagePizzas" HorizontalAlignment="Left" Margin="0,10,0,250" Background="Transparent" Width="790" MaxHeight="190" >
 
             <DataGrid.Resources>
                 <Style TargetType="{x:Type DataGridColumnHeader}">
@@ -28,10 +28,61 @@
             <DataGrid.Columns>
                 <DataGridTextColumn Header=" Pizzas " Binding="{Binding Nom}"  Width="2*"/>
                 <DataGridTextColumn Header=" Contenu " Binding="{Binding Type}" Width="4*"/>
-                <DataGridTextColumn Header=" Petite " Binding="{Binding Prix}" Width="1*"/>
-                <DataGridTextColumn Header=" Moyenne " Binding="{Binding PrixMoyen}" Width="1.5*"/>
-                <DataGridTextColumn Header=" Grande " Binding="{Binding PrixGrand}" Width="1*"/>
+                <DataGridComboBoxColumn Header=" Petite "  Width="1*"/>
+                <DataGridComboBoxColumn Header=" Moyenne " Width="1.5*"/>
+                <DataGridComboBoxColumn Header=" Grande " Width="1*"/>
             </DataGrid.Columns>
         </DataGrid>
+        <DataGrid x:Name="AffichageItems" HorizontalAlignment="Left" Margin="0,205,0,82" Background="Transparent" Width="790" MaxHeight="190" >
+
+            <DataGrid.Resources>
+                <Style TargetType="{x:Type DataGridColumnHeader}">
+                    <Setter Property="FontSize" Value="20"/>
+                    <Setter Property="Background" Value="#0f0f2d"/>
+                    <Setter Property="Foreground" Value="white"/>
+                </Style>
+                <Style TargetType="{x:Type DataGridRow}">
+                    <Setter Property="FontSize" Value="15"/>
+                    <Setter Property="Foreground" Value="White"/>
+                    <Setter Property="Background" Value="Transparent"/>
+                    <Setter Property="VerticalAlignment" Value="Stretch"/>
+                </Style>
+            </DataGrid.Resources>
+
+            <DataGrid.Columns>
+                <DataGridTextColumn Header=" Item " Binding="{Binding Nom}"  Width="2*"/>
+                <DataGridTextColumn Header=" Contenu " Binding="{Binding Type}" Width="4*"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button Content="Commander"
+            Foreground="White"
+            FontSize="14"
+            FontWeight="Medium"
+            Margin="664,399,36,26">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="TextElement.FontFamily" Value="Fonts/#Dosis"/>
+                    <Setter Property="Background" Value="#fe6584"/>
+                    <Setter Property="Cursor" Value="Hand" />
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="#ff4c70"/>
+                        </Trigger>
+                    </Style.Triggers>
+
+                </Style>
+            </Button.Style>
+
+            <Button.Template>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border Width="100" Height="25" 
+                        CornerRadius="12"
+                        Background="{TemplateBinding Background}">
+                        <ContentPresenter VerticalAlignment="Center"
+                            HorizontalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
     </Grid>
 </Page>
