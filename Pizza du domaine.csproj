@@ -62,6 +62,9 @@
     <Compile Include="ClientComisCommande.xaml.cs">
       <DependentUpon>ClientComisCommande.xaml</DependentUpon>
     </Compile>
+    <Compile Include="GestionSalarie.xaml.cs">
+      <DependentUpon>GestionSalarie.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Home.xaml.cs">
       <DependentUpon>Home.xaml</DependentUpon>
     </Compile>
@@ -71,6 +74,10 @@
     <Compile Include="Pizzeria.cs" />
     <Compile Include="Repertoire.cs" />
     <Page Include="ClientComisCommande.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GestionSalarie.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
