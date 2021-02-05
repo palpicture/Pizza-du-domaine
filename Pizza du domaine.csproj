@@ -72,7 +72,6 @@
       <DependentUpon>MenuCommande.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pizzeria.cs" />
-    <Compile Include="Repertoire.cs" />
     <Page Include="ClientComisCommande.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
