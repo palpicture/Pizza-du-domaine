@@ -134,6 +134,7 @@ namespace Pizza_du_domaine
                 if (Adherant(p).Item1) // si la personne est un client
                 {
                     commandeEnregistre = commisAleatoire.PrendreCommande(Adherant(p).Item2);
+                    Adherant(p).Item2.Historiques.Add(commandeEnregistre);
                 }
                 else
                 {
