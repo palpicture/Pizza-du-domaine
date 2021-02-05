@@ -27,6 +27,7 @@ namespace Pizza_du_domaine
             {
                 if(a is Commis)
                     cmbComis.Items.Add(a);
+               
             }
         }
 

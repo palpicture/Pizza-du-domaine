@@ -193,7 +193,7 @@
                             Foreground="White"
                             FontSize="14"
                             FontWeight="Medium"
-                            Margin="0,0,10,0">
+                            Margin="0,0,10,0" Click="Commander">
                     <Button.Style>
                         <Style TargetType="Button">
                             <Setter Property="TextElement.FontFamily" Value="Fonts/#Dosis"/>
@@ -223,7 +223,7 @@
                 <Button Content="Launch Test"
                             Foreground="White"
                             FontSize="14"
-                            FontWeight="Medium">
+                            FontWeight="Medium" Click="Recherche">
                     <Button.Style>
                         <Style TargetType="Button">
                             <Setter Property="TextElement.FontFamily" Value="Fonts/#Dosis"/>

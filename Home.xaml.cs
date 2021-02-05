@@ -36,5 +36,17 @@ namespace Pizza_du_domaine
             Menu.Content = new Menu();
 
         }
+
+        private void Recherche(object sender, RoutedEventArgs e)
+        {
+            MainWindow objMainWindow = (MainWindow)Window.GetWindow(this);
+            objMainWindow.Home.Content = new RechercheClient();
+        }
+
+        private void Commander(object sender, RoutedEventArgs e)
+        {
+            MainWindow objMainWindow = (MainWindow)Window.GetWindow(this);
+            objMainWindow.Home.Content = new MenuCommande();
+        }
     }
 }

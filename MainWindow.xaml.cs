@@ -57,6 +57,29 @@ namespace Pizza_du_domaine
 
         }
 
+        private void OuvrirCommis(object sender, RoutedEventArgs e)
+        {
+            Home.Content = new GestionCommis();
+        }
 
+        private void OuvrirCLients(object sender, RoutedEventArgs e)
+        {
+            Home.Content = new GestionClient();
+        }
+
+        private void OuvrirLivreur(object sender, RoutedEventArgs e)
+        {
+            Home.Content = new GestionLivreur();
+        }
+
+        private void OuvrirCreation(object sender, RoutedEventArgs e)
+        {
+            Home.Content = new CreationClient();
+        }
+
+        private void OuvrirRecherche(object sender, RoutedEventArgs e)
+        {
+            Home.Content = new RechercheClient();
+        }
     }
 }

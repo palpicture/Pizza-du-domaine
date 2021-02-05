@@ -9,8 +9,8 @@ namespace Pizza_du_domaine
     class Commis: Employer
     {
         private DateTime dateEmbauche;
-
-        public Commis(string Key, string Nom, string Prenom, string Adresse, string Tel, string RIB, string Etat):
+        public string[] liste = { "Présent", "Absent", "En congé" };
+    public Commis(string Key, string Nom, string Prenom, string Adresse, string Tel, string RIB, string Etat):
             base(Key, Nom, Prenom, Adresse, Tel, RIB, Etat)
         {
             this.nom = Nom;
