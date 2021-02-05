@@ -119,26 +119,13 @@ namespace Pizza_du_domaine
             }
             return listItems;
         }
-        static void Main(string[] args)
-        {
-            //Client Hugo = new Client("Nabeth", "Hugo", "18 rue Gabriel Faure", "0665570792)
-            //Console.WriteLine(Hugo);
-
-            //Stock("items.txt", true);
-            Repertoire repertoire = new Repertoire("pizzerias.txt");
-            Annuaire("annuaire.txt", true);
-            Menu("pizzas.txt", true);
-            //Console.WriteLine(repertoire);
-            Console.WriteLine("yolo");
-            Console.ReadKey();
-        }
 
         public static List<Commis> FindCommis(List<Commis> liste, string cherche)
         {
             List<Commis> res = new List<Commis>();
-            foreach(Commis a in liste)
+            foreach (Commis a in liste)
             {
-                if(a.Nom.ToLower().Contains(cherche.ToLower()))
+                if (a.Nom.ToLower().Contains(cherche.ToLower()))
                 {
                     res.Add(a);
                 }
@@ -164,7 +151,7 @@ namespace Pizza_du_domaine
             List<Client> res = new List<Client>();
             foreach (Personne a in liste)
             {
-                if(a is Client)
+                if (a is Client)
                 {
                     if (a.Nom.ToLower().Contains(cherche.ToLower()))
                     {
@@ -186,5 +173,19 @@ namespace Pizza_du_domaine
             }
             return res;
         }
+
+        static void Main(string[] args)
+        {
+            //Client Hugo = new Client("Nabeth", "Hugo", "18 rue Gabriel Faure", "0665570792)
+            //Console.WriteLine(Hugo);
+
+            //Stock("items.txt", true);
+            Annuaire("annuaire.txt", true);
+            Menu("pizzas.txt", true);
+            //Console.WriteLine(repertoire);
+            Console.WriteLine("yolo");
+            Console.ReadKey();
+        }
+     
     }
 }
