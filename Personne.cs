@@ -26,7 +26,6 @@ namespace Pizza_du_domaine
         {
             get { return this.nom; }
         }
-
         public string Prenom
         {
             get { return this.prenom; }
@@ -52,18 +51,22 @@ namespace Pizza_du_domaine
             return retour;
         }
 
+        /// <summary>
+        ///  Cette fonction permet d'appeler une pizzeria pour prendre commande
+        /// </summary>
+        /// <param name="pizzeria"></param>
+        /// 
         public virtual void Appeler(Pizzeria pizzeria)
         {
-            Console.Write("Appel en cours");
+            Console.Write("Appel en cours"); // pour le Menu interactif
             for (int i = 0; i < 5; i++)
             {
                 Console.Write(".");
                 Thread.Sleep(1000);
             }
             Console.WriteLine();
-            Commande commandeEnregistre = pizzeria.Decrocher(this);
-            pizzeria.Caisse += commandeEnregistre.Prix();
-
+            Commande commandeEnregistre = pizzeria.Decrocher(this); //on appelle la methode Decrocher qui permet de renvoyer une commande
+            pizzeria.Caisse += commandeEnregistre.Prix(); // on ajoute le prix de la commande a la caisse de la pizzeria
         }
 
     }

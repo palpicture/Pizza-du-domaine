@@ -16,7 +16,7 @@ namespace Pizza_du_domaine
         public static List<Pizza> commandeP;
         public static List<Item> commandeI;
         public static List<Commande> commandes;
-        public static List<Item> Stock(string fichier, bool affichage)
+        public static List<Item> Stock(string fichier, bool affichage) // Permet de recuperer les informations contenus dans le fichier contenant les items
         {
             StreamReader lecteur = new StreamReader(fichier);
             string ligne = "";
@@ -47,7 +47,7 @@ namespace Pizza_du_domaine
             return listItems;
         }
 
-        public static List<Pizza> Menu(string fichier, bool affichage)
+        public static List<Pizza> Menu(string fichier, bool affichage)// Permet de recuperer les informations contenus dans le fichier contenant les pizzas
         {
             StreamReader lecteur = new StreamReader(fichier);
             string ligne = "";
@@ -79,7 +79,7 @@ namespace Pizza_du_domaine
             return listItems;
         }
 
-        public static List<Personne> Annuaire(string fichier, bool affichage)
+        public static List<Personne> Annuaire(string fichier, bool affichage)// Permet de recuperer les informations contenus dans le fichier contenant les personnes
         {
             StreamReader lecteur = new StreamReader(fichier);
             string ligne = "";
@@ -143,7 +143,7 @@ namespace Pizza_du_domaine
                 {
                     using (StreamWriter writer = File.AppendText("effectifs.txt"))
                     {
-                        writer.WriteLine("Commis;" + lines + ";" + element.Nom + ";" + element.Prenom + ";" + element.Adresse + ";" + element.Tel + ";" + element.ReleveId + ";" + element.Etat + ";" + element.MoyenTransport);
+                        writer.WriteLine("Livreur;" + lines + ";" + element.Nom + ";" + element.Prenom + ";" + element.Adresse + ";" + element.Tel + ";" + element.ReleveId + ";" + element.Etat + ";" + element.MoyenTransport);
                     }
                 }
             }
@@ -163,6 +163,12 @@ namespace Pizza_du_domaine
             }
         }
 
+        /// <summary>
+        ///  Permet de chercher un element dans une liste
+        /// </summary>
+        /// <param name="liste"></param>
+        /// <param name="cherche"></param>
+        /// <returns> revoie une liste de commis, livreur, client </returns>
         public static List<Commis> FindCommis(List<Commis> liste, string cherche)
         {
             List<Commis> res = new List<Commis>();
@@ -219,7 +225,7 @@ namespace Pizza_du_domaine
 
         static void Main(string[] args)
         {
-            //Client Hugo = new Client("Nabeth", "Hugo", "18 rue Gabriel Faure", "0665570792)
+            //Client Hugo = new Client("Nabeth", "Hugo", "18 rue Gabriel Faure", "0665570792")
             //Console.WriteLine(Hugo);
 
             //Stock("items.txt", true);

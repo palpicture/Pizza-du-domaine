@@ -55,7 +55,7 @@ namespace Pizza_du_domaine
             return base.ToString();
         }
         
-        public double CalculCumul()
+        public double CalculCumul() //Calcul le cumulle des commandes passé par le client
         {
             double res = 0;
             foreach(Commande a in historique)
