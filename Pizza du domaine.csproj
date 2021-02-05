@@ -84,7 +84,6 @@
     <Compile Include="RechercheClient.xaml.cs">
       <DependentUpon>RechercheClient.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Repertoire.cs" />
     <Page Include="ClientComisCommande.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

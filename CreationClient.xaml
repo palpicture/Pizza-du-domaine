@@ -9,13 +9,13 @@
       Title="CreationClient">
 
     <Grid>
-        <TextBox x:Name="Nom" HorizontalAlignment="Left" Height="43" Margin="306,69,0,0" TextWrapping="Wrap" Text="Nom" VerticalAlignment="Top" Width="300"   FontSize="20"/>
+        <TextBox x:Name="Nom" HorizontalAlignment="Left" Height="43" Margin="306,69,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="300"   FontSize="20"/>
         <TextBlock HorizontalAlignment="Left" Margin="71,70,0,0" TextWrapping="Wrap" Text="Nom : " VerticalAlignment="Top" Height="42" Width="235" TextAlignment="Right" Foreground="White" FontSize="20"/>
-        <TextBox x:Name="Prenom" HorizontalAlignment="Left" Height="43" Margin="306,142,0,0" TextWrapping="Wrap" Text="Prénom" VerticalAlignment="Top" Width="300"   FontSize="20"/>
+        <TextBox x:Name="Prenom" HorizontalAlignment="Left" Height="43" Margin="306,142,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="300"   FontSize="20"/>
         <TextBlock HorizontalAlignment="Left" Margin="71,143,0,0" TextWrapping="Wrap" Text="Prénom : " VerticalAlignment="Top" Height="42" Width="235" TextAlignment="Right" Foreground="White" FontSize="20"/>
-        <TextBox x:Name="Adresse" HorizontalAlignment="Left" Height="43" Margin="306,207,0,0" TextWrapping="Wrap" Text="Adresse" VerticalAlignment="Top" Width="300"   FontSize="20"/>
+        <TextBox x:Name="Adresse" HorizontalAlignment="Left" Height="43" Margin="306,207,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="300"   FontSize="20"/>
         <TextBlock HorizontalAlignment="Left" Margin="71,208,0,0" TextWrapping="Wrap" Text="Adresse : " VerticalAlignment="Top" Height="42" Width="235" TextAlignment="Right" Foreground="White" FontSize="20"/>
-        <TextBox x:Name="Tel" HorizontalAlignment="Left" Height="43" Margin="306,275,0,0" TextWrapping="Wrap" Text="Téléphone" VerticalAlignment="Top" Width="300"   FontSize="20"/>
+        <TextBox x:Name="Tel" HorizontalAlignment="Left" Height="43" Margin="306,275,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="300"   FontSize="20"/>
         <TextBlock HorizontalAlignment="Left" Margin="71,275,0,0" TextWrapping="Wrap" Text="Téléphone : " VerticalAlignment="Top" Height="42" Width="235" TextAlignment="Right" Foreground="White" FontSize="20"/>
         <Button Content="Créer"
             Foreground="White"

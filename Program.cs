@@ -150,17 +150,23 @@ namespace Pizza_du_domaine
         }
         public static void Sauvegarder(List<Personne> liste)
         {
-            var lines = File.ReadLines("annuaire.txt").Count();
-            foreach (Personne element in liste)
+            using (StreamWriter writer = new StreamWriter("annuaire.txt"))
             {
-                if (element != null)
+                foreach (Personne element in liste)
                 {
-                    using (StreamWriter writer = File.AppendText("annuaire.txt"))
+                    if (element != null)
                     {
-                        writer.WriteLine(element.Nom + ";" + element.Prenom + ";" + element.Adresse + ";" + element.Tel);
+                            if (element is Client)
+                                writer.WriteLine("Client;" + element.Nom + ";" + element.Prenom + ";" + element.Adresse + ";" + element.Tel);
+                            else if (element is Commis)
+                                writer.WriteLine("Commis;" + element.Nom + ";" + element.Prenom + ";" + element.Adresse + ";" + element.Tel + ";" + ((Commis)element).ReleveId + ";" + ((Commis)element).Etat);
+                            else if (element is Livreur)
+                                writer.WriteLine("Client;" + element.Nom + ";" + element.Prenom + ";" + element.Adresse + ";" + element.Tel + ";" + ((Livreur)element).ReleveId + ";" + ((Livreur)element).Etat + ";" + ((Livreur)element).MoyenTransport);
                     }
                 }
+                writer.Close();
             }
+                
         }
 
         public static List<Commis> FindCommis(List<Commis> liste, string cherche)

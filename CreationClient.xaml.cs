@@ -33,6 +33,7 @@ namespace Pizza_du_domaine
         private void CreerClient(object sender, RoutedEventArgs e)
         {
             Program.personnes.Add(new Client(Nom.Text, Prenom.Text, Adresse.Text, Tel.Text));
+            Program.Sauvegarder(Program.personnes);
             MainWindow objMainWindow = (MainWindow)Window.GetWindow(this);
             objMainWindow.Home.Content = new Home();
         }

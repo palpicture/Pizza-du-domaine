@@ -9,7 +9,7 @@
       Title="GestionLivreur">
 
     <Grid>
-        <DataGrid x:Name="AffichageLivreur" HorizontalAlignment="Left" Margin="10,0,0,10" Background="Transparent" Width="780" VerticalAlignment="Center" Height="440">
+        <DataGrid x:Name="AffichageLivreur" HorizontalAlignment="Left" Margin="0,0,0,10" Background="Transparent" Width="800" VerticalAlignment="Center" Height="440">
 
             <DataGrid.Resources>
                 <Style TargetType="{x:Type DataGridColumnHeader}">
@@ -30,9 +30,9 @@
                 <DataGridTextColumn Header=" Nom " Binding="{Binding Nom}"  Width="2*"/>
                 <DataGridTextColumn Header=" Prenom " Binding="{Binding Prenom}" Width="2*"/>
                 <DataGridTextColumn Header=" Adresse " Binding="{Binding Adresse}" Width="4*"/>
-                <DataGridTextColumn Header=" Tel " Binding="{Binding Tel}" Width="4*"/>
+                <DataGridTextColumn Header=" Tel " Binding="{Binding Tel}" Width="2*"/>
                 <DataGridTextColumn  Header=" Etat " Width="1.5*" Binding="{Binding Etat}"/>
-                <DataGridTextColumn  Header=" Transport " Width="1.5*" Binding="{Binding MoyenTransport}"/>
+                <DataGridTextColumn  Header=" Transport " Width="2.5*" Binding="{Binding MoyenTransport}"/>
             </DataGrid.Columns>
         </DataGrid>
     </Grid>

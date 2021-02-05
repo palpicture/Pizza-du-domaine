@@ -30,13 +30,6 @@ namespace Pizza_du_domaine
             }
         }
 
-        private void ouvrirMenu(object sender, RoutedEventArgs e)
-        {
-            this.Visibility = Visibility.Hidden;
-            Menu.Content = new Menu();
-
-        }
-
         private void Recherche(object sender, RoutedEventArgs e)
         {
             MainWindow objMainWindow = (MainWindow)Window.GetWindow(this);

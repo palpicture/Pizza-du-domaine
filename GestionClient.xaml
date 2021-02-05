@@ -30,7 +30,7 @@
                 <DataGridTextColumn Header=" Prenom " Binding="{Binding Prenom}" Width="2*"/>
                 <DataGridTextColumn Header=" Adresse " Binding="{Binding Adresse}" Width="4*"/>
                 <DataGridTextColumn Header=" Tel " Binding="{Binding Tel}" Width="4*"/>
-                <DataGridTextColumn  Header=" Etat " Width="1.5*" Binding="{Binding Cumul}"/>
+                <DataGridTextColumn  Header=" Cumul " Width="1.5*" Binding="{Binding Cumul}"/>
             </DataGrid.Columns>
         </DataGrid>
     </Grid>
