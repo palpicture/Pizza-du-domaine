@@ -120,6 +120,49 @@ namespace Pizza_du_domaine
             return listItems;
         }
 
+        public static void Sauvegarder(List<Commis> liste)
+        {
+            var lines = File.ReadLines("effectifs.txt").Count();
+            foreach (Commis element in liste)
+            {
+                if (element != null)
+                {
+                    using (StreamWriter writer = File.AppendText("effectifs.txt"))
+                    {
+                        writer.WriteLine("Commis;" + lines + ";" + element.Nom + ";" + element.Prenom + ";" + element.Adresse + ";" + element.Tel + ";" + element.ReleveId + ";" + element.Etat);
+                    }
+                }
+            }
+        }
+        public static void Sauvegarder(List<Livreur> liste)
+        {
+            var lines = File.ReadLines("effectifs.txt").Count();
+            foreach (Livreur element in liste)
+            {
+                if (element != null)
+                {
+                    using (StreamWriter writer = File.AppendText("effectifs.txt"))
+                    {
+                        writer.WriteLine("Commis;" + lines + ";" + element.Nom + ";" + element.Prenom + ";" + element.Adresse + ";" + element.Tel + ";" + element.ReleveId + ";" + element.Etat + ";" + element.MoyenTransport);
+                    }
+                }
+            }
+        }
+        public static void Sauvegarder(List<Personne> liste)
+        {
+            var lines = File.ReadLines("annuaire.txt").Count();
+            foreach (Personne element in liste)
+            {
+                if (element != null)
+                {
+                    using (StreamWriter writer = File.AppendText("annuaire.txt"))
+                    {
+                        writer.WriteLine(element.Nom + ";" + element.Prenom + ";" + element.Adresse + ";" + element.Tel);
+                    }
+                }
+            }
+        }
+
         public static List<Commis> FindCommis(List<Commis> liste, string cherche)
         {
             List<Commis> res = new List<Commis>();

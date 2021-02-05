@@ -23,6 +23,17 @@ namespace Pizza_du_domaine
             get { return this.key; }
         }
 
+        public string Etat // soit present, congé
+        {
+            get { return this.etat; }
+            set { this.etat = value; }
+        }
+
+        public string ReleveId
+        {
+            get { return this.RIB; }
+        }
+
 
     }
 }

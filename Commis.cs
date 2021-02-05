@@ -21,14 +21,6 @@ namespace Pizza_du_domaine
             this.dateEmbauche = DateTime.Now;
         }
 
-        #region Prorietes      
-        public string Etat // soit present, congé
-        {
-            get { return this.etat; }
-            set { this.etat = value; }
-        }
-        #endregion
-        
         public Commande PrendreCommande(Client c)
         {
             DateTime dateCommande = new DateTime().Date;

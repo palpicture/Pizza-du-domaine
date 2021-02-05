@@ -22,6 +22,11 @@ namespace Pizza_du_domaine
             this.etat = Etat;
             this.moyenTransp = MoyenTransp;
         }
+
+        public string MoyenTransport
+        {
+            get { return this.moyenTransp; }
+        }
        
         public static void Livraison(Commande c)
         {
