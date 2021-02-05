@@ -65,7 +65,6 @@
     </Compile>
     <Compile Include="Client.cs" />
     <Compile Include="Commande.cs" />
-    <Compile Include="Commis.cs" />
     <Compile Include="Employer.cs" />
     <Compile Include="IContact.cs" />
     <Compile Include="Item.cs" />
