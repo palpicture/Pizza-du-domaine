@@ -183,7 +183,11 @@ namespace Pizza_du_domaine
             Annuaire("annuaire.txt", true);
             Menu("pizzas.txt", true);
             //Console.WriteLine(repertoire);
-            Console.WriteLine("yolo");
+            List<Personne> listPersonne = Annuaire("annuaire.txt", false);
+            Personne hugo = listPersonne[0];
+            Pizzeria Dominos = new Pizzeria("Dominos", "adresse", "01815466");
+            hugo.Appeler(Dominos);
+
             Console.ReadKey();
         }
      
