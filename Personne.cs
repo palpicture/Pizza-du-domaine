@@ -61,7 +61,9 @@ namespace Pizza_du_domaine
                 Thread.Sleep(1000);
             }
             Console.WriteLine();
-            pizzeria.Decrocher(this);
+            Commande commandeEnregistre = pizzeria.Decrocher(this);
+            pizzeria.Caisse += commandeEnregistre.Prix();
+
         }
 
     }

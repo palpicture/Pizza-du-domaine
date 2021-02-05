@@ -47,14 +47,7 @@ namespace Pizza_du_domaine
 
         public override void Appeler(Pizzeria pizzeria)
         {
-            Console.Write("Appel en cours");
-            for (int i = 0; i < 5; i++)
-            {
-                Console.Write(".");
-                Thread.Sleep(1000);
-            }
-            Console.WriteLine();
-            pizzeria.Decrocher(this);
+            base.Appeler(pizzeria);
         }
 
         public override string ToString()

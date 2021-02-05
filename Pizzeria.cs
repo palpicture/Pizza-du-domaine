@@ -63,6 +63,13 @@ namespace Pizza_du_domaine
         {
             get { return this.telephone; }
         }
+
+        public double Caisse
+        {
+            get { return this.caisse; }
+            set { this.caisse = value; }
+        }
+
         #endregion
 
         public bool PizzeriaOuverte()
@@ -134,14 +141,12 @@ namespace Pizza_du_domaine
                 if (Adherant(p).Item1) // si la personne est un client
                 {
                     commandeEnregistre = commisAleatoire.PrendreCommande(Adherant(p).Item2);
-                    Adherant(p).Item2.Historiques.Add(commandeEnregistre);
                 }
                 else
                 {
                     Client newClient = new Client(p.Nom,p.Prenom,p.Adresse,p.Tel);
                     this.listClients.Add(newClient);
                     commandeEnregistre = commisAleatoire.PrendreCommande(newClient);
-                    newClient.Historiques.Add(commandeEnregistre);
                 }
                 this.listCommandes.Add(commandeEnregistre); // on ajoute la commande en cours; on la retirera quand le livreur aura donne la comm. au client
             }

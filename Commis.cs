@@ -31,8 +31,6 @@ namespace Pizza_du_domaine
         
         public Commande PrendreCommande(Client c)
         {
-            Random rnd = new Random();
-            string numCommande = Convert.ToString(rnd.Next(0, 10000));
             DateTime dateCommande = new DateTime().Date;
             List<Pizza> listPizza = new List<Pizza>();
             List<Item> listItem = new List<Item>();
@@ -103,7 +101,7 @@ namespace Pizza_du_domaine
                     }
                 }
             }
-            Commande commande = new Commande(numCommande, dateCommande, listItem, listPizza, c, this);
+            Commande commande = new Commande(listItem, listPizza, c, this);
             Console.WriteLine(commande.Facture(prix));
             Livreur.Livraison(commande);
             
