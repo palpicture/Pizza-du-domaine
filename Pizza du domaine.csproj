@@ -69,7 +69,6 @@
     <Compile Include="Employer.cs" />
     <Compile Include="IContact.cs" />
     <Compile Include="Item.cs" />
-    <Compile Include="Livreur.cs" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Personne.cs" />
