@@ -16,13 +16,19 @@ using System.Windows.Shapes;
 namespace Pizza_du_domaine
 {
     /// <summary>
-    /// Logique d'interaction pour GestionSalarie.xaml
+    /// Logique d'interaction pour GestionClient.xaml
     /// </summary>
-    public partial class GestionSalarie : Page
+    public partial class GestionClient : Page
     {
-        public GestionSalarie()
+        public GestionClient()
         {
             InitializeComponent();
+            foreach (Personne a in Program.personnes)
+            {
+                if (a is Client)
+                    AffichageClients.Items.Add(a);
+
+            }
         }
     }
 }

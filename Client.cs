@@ -43,6 +43,8 @@ namespace Pizza_du_domaine
             get { return this.historique; }
             set { this.historique = value; }
         }
+
+        public double Cumul { get { return cumul; } }
         #endregion
 
         public override void Appeler(Pizzeria pizzeria)

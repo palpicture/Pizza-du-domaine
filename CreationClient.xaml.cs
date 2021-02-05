@@ -16,30 +16,26 @@ using System.Windows.Shapes;
 namespace Pizza_du_domaine
 {
     /// <summary>
-    /// Logique d'interaction pour Home.xaml
+    /// Logique d'interaction pour CreationClient.xaml
     /// </summary>
-    public partial class Home : Page
+    public partial class CreationClient : Page
     {
-        public Home()
+        public CreationClient()
         {
-            
             InitializeComponent();
-            foreach (Pizza a in Program.menu)
-            {
-                AffichagePizzas.Items.Add(a);
-            }
         }
 
-        private void Recherche(object sender, RoutedEventArgs e)
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
-            MainWindow objMainWindow = (MainWindow)Window.GetWindow(this);
-            objMainWindow.Home.Content = new RechercheClient();
+
         }
 
-        private void Commander(object sender, RoutedEventArgs e)
+        private void CreerClient(object sender, RoutedEventArgs e)
         {
+            Program.personnes.Add(new Client(Nom.Text, Prenom.Text, Adresse.Text, Tel.Text));
+            Program.Sauvegarder(Program.personnes);
             MainWindow objMainWindow = (MainWindow)Window.GetWindow(this);
-            objMainWindow.Home.Content = new MenuCommande();
+            objMainWindow.Home.Content = new Home();
         }
     }
 }
